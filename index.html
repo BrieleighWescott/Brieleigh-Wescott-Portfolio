@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brieleigh Wescott | Data & Analytics Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b0d10;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 7%;
+      background: rgba(11, 13, 16, 0.95);
+      border-bottom: 1px solid #292d33;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #b9bec7;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 8%;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #b9bec7;
+      letter-spacing: 4px;
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(65px, 10vw, 145px);
+      line-height: 0.9;
+      letter-spacing: -6px;
+      margin-bottom: 35px;
+    }
+
+    h1 span {
+      color: #858b95;
+    }
+
+    .intro {
+      max-width: 750px;
+      font-size: 24px;
+      color: #c3c7ce;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      border: 1px solid #5e646d;
+      color: white;
+      text-decoration: none;
+      margin-right: 12px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: white;
+      color: #0b0d10;
+    }
+
+    section {
+      padding: 100px 8%;
+      max-width: 1400px;
+      margin: auto;
+      border-top: 1px solid #292d33;
+    }
+
+    .section-label {
+      color: #858b95;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: clamp(40px, 6vw, 75px);
+      line-height: 1;
+      margin-bottom: 55px;
+      letter-spacing: -3px;
+    }
+
+    .project {
+      padding: 45px 0;
+      border-top: 1px solid #292d33;
+    }
+
+    .project:first-of-type {
+      border-top: none;
+    }
+
+    .project-number {
+      color: #6f7580;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      margin-bottom: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid #3d424a;
+      padding: 4px 9px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      color: #b9bec7;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      font-size: clamp(30px, 4vw, 50px);
+      margin-bottom: 15px;
+      letter-spacing: -2px;
+    }
+
+    .project p {
+      max-width: 850px;
+      color: #adb2bb;
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    .project a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid #777d86;
+      margin-right: 22px;
+    }
+
+    .project a:hover {
+      color: #b9bec7;
+    }
+
+    .stats {
+      display: flex;
+      gap: 45px;
+      margin: 25px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 26px;
+    }
+
+    .stat span {
+      color: #858b95;
+      font-size: 12px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid #292d33;
+    }
+
+    .skill {
+      padding: 30px;
+      border-right: 1px solid #292d33;
+    }
+
+    .skill:last-child {
+      border-right: none;
+    }
+
+    .skill h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .skill p {
+      color: #969ca6;
+    }
+
+    .about-text {
+      max-width: 850px;
+      font-size: 22px;
+      color: #b8bdc5;
+    }
+
+    footer {
+      padding: 40px 8%;
+      border-top: 1px solid #292d33;
+      color: #777d86;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .skill {
+        border-bottom: 1px solid #292d33;
+      }
+
+      nav .links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .intro {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">BW</div>
+
+  <div class="links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+  </div>
+</nav>
+
+
+<header class="hero">
+
+  <div class="eyebrow">
+    DATA • ANALYTICS • OPTIMIZATION
+  </div>
+
+  <h1>
+    Brieleigh<br>
+    <span>Wescott.</span>
+  </h1>
+
+  <p class="intro">
+    Applied Mathematics student using data, programming,
+    and quantitative methods to turn complex problems
+    into clear, useful decisions.
+  </p>
+
+  <div>
+    <a class="button" href="#work">View My Work</a>
+    <a class="button" href="#about">About Me</a>
+  </div>
+
+</header>
+
+
+<section id="work">
+
+  <div class="section-label">SELECTED WORK</div>
+
+  <h2>Projects built around real data.</h2>
+
+
+  <div class="project">
+
+    <div class="project-number">01</div>
+
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">PyLIDC</span>
+      <span class="tag">PyRadiomics</span>
+      <span class="tag">Data Engineering</span>
+    </div>
+
+    <h3>3D Lung CT Radiomics Pipeline</h3>
+
+    <p>
+      Developed a Python workflow for processing lung CT imaging
+      and radiologist annotations into structured tumor-level data.
+      The pipeline groups annotations belonging to the same tumor,
+      creates consensus tumor masks, and extracts quantitative
+      radiomic features for analysis.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>1,018</strong>
+        <span>Patients</span>
+      </div>
+
+      <div class="stat">
+        <strong>244,000+</strong>
+        <span>DICOM Files</span>
+      </div>
+
+      <div class="stat">
+        <strong>6,800+</strong>
+        <span>Radiologist Annotations</span>
+      </div>
+
+    </div>
+
+    <a href="Progress Check.pptx">
+      View Presentation ↗
+    </a>
+
+    <a href="Radiomic Data">
+      View Python Code ↗
+    </a>
+
+  </div>
+
+
+  <div class="project">
+
+    <div class="project-number">02</div>
+
+    <div class="tags">
+      <span class="tag">SQL</span>
+      <span class="tag">BigQuery</span>
+      <span class="tag">Data Analysis</span>
+    </div>
+
+    <h3>Book Publishing SQL Guide</h3>
+
+    <p>
+      Created a practical SQL guide using a book publishing
+      research dataset. Queries demonstrate filtering,
+      aggregation, ranking, CTEs, window functions,
+      percentiles, and marketplace engagement analysis.
+    </p>
+
+    <a href="SQL Guide (1).pdf">
+      View SQL Guide ↗
+    </a>
+
+  </div>
+
+
+  <div class="project">
+
+    <div class="project-number">03</div>
+
+    <div class="tags">
+      <span class="tag">Optimization</span>
+      <span class="tag">R</span>
+      <span class="tag">Quantitative Analysis</span>
+    </div>
+
+    <h3>Portfolio Optimization</h3>
+
+    <p>
+      Developed a quantitative portfolio model using historical
+      market data to examine the tradeoff between risk and return.
+      The analysis includes allocation constraints, sensitivity
+      testing, and construction of an efficient frontier.
+    </p>
+
+    <a href="MTH 3017 Project Report (Draft 1) (4).pdf">
+      View Project Report ↗
+    </a>
+
+  </div>
+
+
+  <div class="project">
+
+    <div class="project-number">04</div>
+
+    <div class="tags">
+      <span class="tag">R</span>
+      <span class="tag">Statistical Modeling</span>
+      <span class="tag">Excel</span>
+      <span class="tag">Data Cleaning</span>
+    </div>
+
+    <h3>EPA Air Quality Modeling</h3>
+
+    <p>
+      Cleaned and combined large environmental datasets
+      containing pollution, weather, geographic, and seasonal
+      variables. Logistic and negative binomial regression models
+      were then used to analyze PM2.5 exceedance behavior.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>2.9M</strong>
+        <span>Raw Observations</span>
+      </div>
+
+      <div class="stat">
+        <strong>16.9K</strong>
+        <span>Analysis-Ready Observations</span>
+      </div>
+
+    </div>
+
+    <a href="Project 2 Paper (13).pdf">
+      View Project Report ↗
+    </a>
+
+  </div>
+
+</section>
+
+
+<section id="about">
+
+  <div class="section-label">ABOUT ME</div>
+
+  <h2>I like problems that start messy.</h2>
+
+  <p class="about-text">
+    I study Applied Mathematics with a concentration in Data Science
+    and Artificial Intelligence at Florida Institute of Technology.
+    I enjoy taking unfamiliar datasets and complex problems,
+    understanding how the pieces fit together, and building
+    repeatable analytical processes that make the information
+    easier to understand and use.
+  </p>
+
+</section>
+
+
+<section id="skills">
+
+  <div class="section-label">TECHNICAL TOOLKIT</div>
+
+  <h2>Tools I use to solve problems.</h2>
+
+  <div class="skills">
+
+    <div class="skill">
+      <h4>Programming</h4>
+      <p>Python<br>R<br>SQL</p>
+    </div>
+
+    <div class="skill">
+      <h4>Analytics</h4>
+      <p>BigQuery<br>Excel<br>Statistical Modeling<br>Optimization</p>
+    </div>
+
+    <div class="skill">
+      <h4>Data</h4>
+      <p>Data Cleaning<br>Feature Extraction<br>Data Pipelines<br>Predictive Modeling</p>
+    </div>
+
+    <div class="skill">
+      <h4>Visualization</h4>
+      <p>R / ggplot2<br>Analytical Reporting<br>Research Visualization</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  <span>Brieleigh Wescott</span>
+  <span>Data & Analytics Portfolio</span>
+</footer>
+
+</body>
+</html>
