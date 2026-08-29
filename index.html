@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Brieleigh Wescott | Data & Analytics Portfolio</title>
+  <title>Brieleigh Wescott | Interview Portfolio</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -19,248 +19,265 @@
 
     body {
       background: #0b0d10;
-      color: #f5f5f5;
+      color: #f4f4f4;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
     nav {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(11, 13, 16, 0.95);
+      border-bottom: 1px solid #252a31;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 7%;
-      background: rgba(11, 13, 16, 0.95);
-      border-bottom: 1px solid #292d33;
     }
 
     .logo {
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 18px;
+      font-weight: 700;
       letter-spacing: 2px;
     }
 
-    nav a {
-      color: #b9bec7;
-      text-decoration: none;
-      margin-left: 28px;
+    .nav-links {
+      display: flex;
+      gap: 30px;
       font-size: 14px;
+      color: #aeb4bd;
     }
 
-    nav a:hover {
-      color: white;
+    .nav-links a:hover {
+      color: #ffffff;
     }
+
+    /* HERO */
 
     .hero {
       min-height: 88vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px 8%;
-      max-width: 1400px;
+      align-items: center;
+      max-width: 1200px;
       margin: auto;
+      padding: 80px 30px;
+    }
+
+    .hero-content {
+      max-width: 950px;
     }
 
     .eyebrow {
-      color: #b9bec7;
-      letter-spacing: 4px;
+      color: #8d98a8;
       font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
       margin-bottom: 25px;
     }
 
     h1 {
-      font-size: clamp(65px, 10vw, 145px);
-      line-height: 0.9;
-      letter-spacing: -6px;
+      font-size: clamp(48px, 7vw, 90px);
+      line-height: 1;
+      letter-spacing: -4px;
       margin-bottom: 35px;
-    }
-
-    h1 span {
-      color: #858b95;
     }
 
     .intro {
-      max-width: 750px;
-      font-size: 24px;
-      color: #c3c7ce;
-      margin-bottom: 35px;
+      max-width: 760px;
+      color: #b8bec7;
+      font-size: 19px;
+      line-height: 1.8;
+      margin-bottom: 40px;
     }
 
     .button {
       display: inline-block;
       padding: 13px 22px;
-      border: 1px solid #5e646d;
-      color: white;
-      text-decoration: none;
+      border: 1px solid #697382;
       margin-right: 12px;
-      font-weight: bold;
+      margin-top: 10px;
+      font-size: 14px;
+      transition: 0.2s ease;
     }
 
     .button:hover {
-      background: white;
+      background: #f4f4f4;
       color: #0b0d10;
+      border-color: #f4f4f4;
     }
 
+    /* GENERAL SECTIONS */
+
     section {
-      padding: 100px 8%;
-      max-width: 1400px;
+      max-width: 1200px;
       margin: auto;
-      border-top: 1px solid #292d33;
+      padding: 100px 30px;
     }
 
     .section-label {
-      color: #858b95;
-      letter-spacing: 3px;
+      color: #7d8794;
       font-size: 12px;
-      margin-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
     }
 
     h2 {
-      font-size: clamp(40px, 6vw, 75px);
-      line-height: 1;
-      margin-bottom: 55px;
-      letter-spacing: -3px;
+      font-size: clamp(35px, 5vw, 60px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 45px;
     }
+
+    /* PROJECTS */
 
     .project {
-      padding: 45px 0;
-      border-top: 1px solid #292d33;
-    }
-
-    .project:first-of-type {
-      border-top: none;
+      border-top: 1px solid #30353d;
+      padding: 55px 0;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 30px;
     }
 
     .project-number {
-      color: #6f7580;
-      font-size: 13px;
-      margin-bottom: 12px;
+      color: #646d79;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
-    .tags {
-      margin-bottom: 15px;
+    .project-content {
+      max-width: 850px;
     }
 
-    .tag {
-      display: inline-block;
-      border: 1px solid #3d424a;
-      padding: 4px 9px;
-      margin-right: 6px;
-      margin-bottom: 6px;
-      color: #b9bec7;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    h3 {
-      font-size: clamp(30px, 4vw, 50px);
-      margin-bottom: 15px;
-      letter-spacing: -2px;
+    .project h3 {
+      font-size: 30px;
+      margin-bottom: 18px;
     }
 
     .project p {
-      max-width: 850px;
-      color: #adb2bb;
-      font-size: 17px;
-      margin-bottom: 22px;
+      color: #b3bac4;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 800px;
+      margin-bottom: 20px;
     }
 
-    .project a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-bottom: 1px solid #777d86;
-      margin-right: 22px;
-    }
-
-    .project a:hover {
-      color: #b9bec7;
-    }
-
-    .stats {
+    .tags {
       display: flex;
-      gap: 45px;
-      margin: 25px 0;
       flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0;
     }
 
-    .stat strong {
-      display: block;
-      font-size: 26px;
+    .tag {
+      border: 1px solid #343a43;
+      color: #949eaa;
+      padding: 6px 10px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    .stat span {
-      color: #858b95;
-      font-size: 12px;
+    .project-links {
+      margin-top: 25px;
     }
 
-    .skills {
+    /* ABOUT */
+
+    #about {
+      border-top: 1px solid #252a31;
+    }
+
+    .about-content {
+      max-width: 900px;
+    }
+
+    .about-content p {
+      color: #b3bac4;
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 25px;
+    }
+
+    /* SKILLS */
+
+    #skills {
+      border-top: 1px solid #252a31;
+    }
+
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid #292d33;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .skill {
+    .skill-box {
+      border: 1px solid #30353d;
       padding: 30px;
-      border-right: 1px solid #292d33;
     }
 
-    .skill:last-child {
-      border-right: none;
-    }
-
-    .skill h4 {
-      margin-bottom: 10px;
+    .skill-box h3 {
+      margin-bottom: 15px;
       font-size: 18px;
     }
 
-    .skill p {
-      color: #969ca6;
+    .skill-box p {
+      color: #9da5af;
+      line-height: 1.8;
+      font-size: 14px;
     }
 
-    .about-text {
-      max-width: 850px;
-      font-size: 22px;
-      color: #b8bdc5;
-    }
+    /* FOOTER */
 
     footer {
-      padding: 40px 8%;
-      border-top: 1px solid #292d33;
-      color: #777d86;
-      display: flex;
-      justify-content: space-between;
+      border-top: 1px solid #252a31;
+      padding: 40px 30px;
+      text-align: center;
+      color: #747d89;
       font-size: 13px;
     }
 
-    @media (max-width: 800px) {
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      .nav-links {
+        gap: 15px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 100px;
+      }
+
       h1 {
-        letter-spacing: -3px;
+        letter-spacing: -2px;
       }
 
-      .skills {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .skill {
-        border-bottom: 1px solid #292d33;
-      }
-
-      nav .links {
-        display: none;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .skills {
+      .project {
         grid-template-columns: 1fr;
+        gap: 10px;
       }
 
-      .intro {
-        font-size: 19px;
+      .skills-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -268,250 +285,341 @@
 
 <body>
 
-<nav>
-  <div class="logo">BW</div>
+  <!-- NAVIGATION -->
 
-  <div class="links">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-  </div>
-</nav>
+  <nav>
+    <div class="nav-container">
 
+      <a href="#" class="logo">BW</a>
 
-<header class="hero">
-
-  <div class="eyebrow">
-    DATA • ANALYTICS • OPTIMIZATION
-  </div>
-
-  <h1>
-    Brieleigh<br>
-    <span>Wescott.</span>
-  </h1>
-
-  <p class="intro">
-    Applied Mathematics student using data, programming,
-    and quantitative methods to turn complex problems
-    into clear, useful decisions.
-  </p>
-
-  <div>
-    <a class="button" href="#work">View My Work</a>
-    <a class="button" href="#about">About Me</a>
-  </div>
-
-</header>
-
-
-<section id="work">
-
-  <div class="section-label">SELECTED WORK</div>
-
-  <h2>Projects built around real data.</h2>
-
-
-  <div class="project">
-
-    <div class="project-number">01</div>
-
-    <div class="tags">
-      <span class="tag">Python</span>
-      <span class="tag">PyLIDC</span>
-      <span class="tag">PyRadiomics</span>
-      <span class="tag">Data Engineering</span>
-    </div>
-
-    <h3>3D Lung CT Radiomics Pipeline</h3>
-
-    <p>
-      Developed a Python workflow for processing lung CT imaging
-      and radiologist annotations into structured tumor-level data.
-      The pipeline groups annotations belonging to the same tumor,
-      creates consensus tumor masks, and extracts quantitative
-      radiomic features for analysis.
-    </p>
-
-    <div class="stats">
-
-      <div class="stat">
-        <strong>1,018</strong>
-        <span>Patients</span>
-      </div>
-
-      <div class="stat">
-        <strong>244,000+</strong>
-        <span>DICOM Files</span>
-      </div>
-
-      <div class="stat">
-        <strong>6,800+</strong>
-        <span>Radiologist Annotations</span>
+      <div class="nav-links">
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
       </div>
 
     </div>
-
-    <a href="Progress Check.pptx">
-      View Presentation ↗
-    </a>
-
-    <a href="Radiomic Data">
-      View Python Code ↗
-    </a>
-
-  </div>
+  </nav>
 
 
-  <div class="project">
+  <!-- HERO -->
 
-    <div class="project-number">02</div>
+  <header class="hero">
 
-    <div class="tags">
-      <span class="tag">SQL</span>
-      <span class="tag">BigQuery</span>
-      <span class="tag">Data Analysis</span>
-    </div>
+    <div class="hero-content">
 
-    <h3>Book Publishing SQL Guide</h3>
-
-    <p>
-      Created a practical SQL guide using a book publishing
-      research dataset. Queries demonstrate filtering,
-      aggregation, ranking, CTEs, window functions,
-      percentiles, and marketplace engagement analysis.
-    </p>
-
-    <a href="SQL Guide (1).pdf">
-      View SQL Guide ↗
-    </a>
-
-  </div>
-
-
-  <div class="project">
-
-    <div class="project-number">03</div>
-
-    <div class="tags">
-      <span class="tag">Optimization</span>
-      <span class="tag">R</span>
-      <span class="tag">Quantitative Analysis</span>
-    </div>
-
-    <h3>Portfolio Optimization</h3>
-
-    <p>
-      Developed a quantitative portfolio model using historical
-      market data to examine the tradeoff between risk and return.
-      The analysis includes allocation constraints, sensitivity
-      testing, and construction of an efficient frontier.
-    </p>
-
-    <a href="MTH 3017 Project Report (Draft 1) (4).pdf">
-      View Project Report ↗
-    </a>
-
-  </div>
-
-
-  <div class="project">
-
-    <div class="project-number">04</div>
-
-    <div class="tags">
-      <span class="tag">R</span>
-      <span class="tag">Statistical Modeling</span>
-      <span class="tag">Excel</span>
-      <span class="tag">Data Cleaning</span>
-    </div>
-
-    <h3>EPA Air Quality Modeling</h3>
-
-    <p>
-      Cleaned and combined large environmental datasets
-      containing pollution, weather, geographic, and seasonal
-      variables. Logistic and negative binomial regression models
-      were then used to analyze PM2.5 exceedance behavior.
-    </p>
-
-    <div class="stats">
-
-      <div class="stat">
-        <strong>2.9M</strong>
-        <span>Raw Observations</span>
+      <div class="eyebrow">
+        SUPPLY CHAIN SYSTEMS ANALYST (LAUNCH) — INTERVIEW
       </div>
 
-      <div class="stat">
-        <strong>16.9K</strong>
-        <span>Analysis-Ready Observations</span>
+      <h1>Brieleigh Wescott.</h1>
+
+      <p class="intro">
+        Thank you for taking the time to speak with me! I created this
+        website as a quick and easy way to access the projects and
+        documents I would like to discuss during our first interview.
+      </p>
+
+      <a class="button" href="#work">View My Work ↓</a>
+
+    </div>
+
+  </header>
+
+
+  <!-- PROJECTS -->
+
+  <section id="work">
+
+    <div class="section-label">PROJECTS</div>
+
+
+    <!-- PROJECT 01 -->
+
+    <div class="project">
+
+      <div class="project-number">01</div>
+
+      <div class="project-content">
+
+        <h3>3D Lung CT Radiomics Pipeline</h3>
+
+        <p>
+          Below I have attached two documents. The first is a presentation I
+          recently gave to my coworkers during our monthly progress check to
+          discuss the dataset I am currently working with. The second is a
+          quick example of the Python code I used for this project.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyLIDC</span>
+          <span class="tag">PyRadiomics</span>
+          <span class="tag">Data Engineering</span>
+        </div>
+
+        <div class="project-links">
+
+          <a
+            class="button"
+            href="Progress Check.pptx"
+            target="_blank">
+            View Presentation
+          </a>
+
+          <a
+            class="button"
+            href="Radiomic Data"
+            target="_blank">
+            View Python Code
+          </a>
+
+        </div>
+
       </div>
 
     </div>
 
-    <a href="Project 2 Paper (13).pdf">
-      View Project Report ↗
-    </a>
 
-  </div>
+    <!-- PROJECT 02 -->
 
-</section>
+    <div class="project">
 
+      <div class="project-number">02</div>
 
-<section id="about">
+      <div class="project-content">
 
-  <div class="section-label">ABOUT ME</div>
+        <h3>Book Publishing SQL Guide</h3>
 
-  <h2>I like problems that start messy.</h2>
+        <p>
+          Our school primarily uses R when it comes to cleaning and analyzing
+          large datasets. I recently taught myself how to use SQL and created
+          this guide for my professor before I transitioned to another position.
+          I sent it to her in hopes of showing both her and anyone else working
+          on the project what SQL can be used for.
+        </p>
 
-  <p class="about-text">
-    I study Applied Mathematics with a concentration in Data Science
-    and Artificial Intelligence at Florida Institute of Technology.
-    I enjoy taking unfamiliar datasets and complex problems,
-    understanding how the pieces fit together, and building
-    repeatable analytical processes that make the information
-    easier to understand and use.
-  </p>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Data Analysis</span>
+        </div>
 
-</section>
+        <div class="project-links">
 
+          <a
+            class="button"
+            href="SQL Guide (1).pdf"
+            target="_blank">
+            View SQL Guide
+          </a>
 
-<section id="skills">
+        </div>
 
-  <div class="section-label">TECHNICAL TOOLKIT</div>
+      </div>
 
-  <h2>Tools I use to solve problems.</h2>
-
-  <div class="skills">
-
-    <div class="skill">
-      <h4>Programming</h4>
-      <p>Python<br>R<br>SQL</p>
     </div>
 
-    <div class="skill">
-      <h4>Analytics</h4>
-      <p>BigQuery<br>Excel<br>Statistical Modeling<br>Optimization</p>
+
+    <!-- PROJECT 03 -->
+
+    <div class="project">
+
+      <div class="project-number">03</div>
+
+      <div class="project-content">
+
+        <h3>Portfolio Optimization &amp; Efficient Frontier</h3>
+
+        <p>
+          This was my final presentation for my Optimization course. I was
+          responsible for all of the coding and data visualizations for the project.
+        </p>
+
+        <div class="tags">
+          <span class="tag">R</span>
+          <span class="tag">Optimization</span>
+          <span class="tag">Quantitative Analysis</span>
+          <span class="tag">Data Visualization</span>
+        </div>
+
+        <div class="project-links">
+
+          <a
+            class="button"
+            href="MTH 3017 Project Report (Draft 1) (4).pdf"
+            target="_blank">
+            View Project
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="skill">
-      <h4>Data</h4>
-      <p>Data Cleaning<br>Feature Extraction<br>Data Pipelines<br>Predictive Modeling</p>
+
+    <!-- PROJECT 04 -->
+
+    <div class="project">
+
+      <div class="project-number">04</div>
+
+      <div class="project-content">
+
+        <h3>EPA Air Quality Statistical Modeling</h3>
+
+        <p>
+          This was a project I completed with a student pursuing her Master's
+          degree in Environmental Science. I was responsible for much of the
+          statistical modeling and all of the data visualizations for the project.
+        </p>
+
+        <div class="tags">
+          <span class="tag">R</span>
+          <span class="tag">Statistical Modeling</span>
+          <span class="tag">Data Cleaning</span>
+          <span class="tag">Excel</span>
+        </div>
+
+        <div class="project-links">
+
+          <a
+            class="button"
+            href="Project 2 Paper (13).pdf"
+            target="_blank">
+            View Project
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="skill">
-      <h4>Visualization</h4>
-      <p>R / ggplot2<br>Analytical Reporting<br>Research Visualization</p>
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="about-content">
+
+      <div class="section-label">ABOUT ME</div>
+
+      <h2>More Than the Numbers</h2>
+
+      <p>
+        When most recruiters come across a math major, I have noticed they tend
+        to assume I spend all of my time doing theory and proofs. And while I
+        have definitely done my fair share of both, I am not just a math major.
+        I am an Applied Mathematics major concentrating in Data and AI. I chose
+        applied math because I have always been much more interested in what I
+        can do with math rather than just computing it. There is something so
+        satisfying to me about taking any problem and turning it into the way
+        my brain works best: numbers.
+      </p>
+
+      <p>
+        That is a big reason SpaceX has always stood out to me, and why this
+        position specifically caught my attention. The Supply Chain Systems
+        Analyst role combines all the things I enjoy most, from data to business
+        (I have a finance minor too!). I like the idea of not only finding trends
+        in data, but figuring out why they are happening and then building
+        something that makes the process better and easier for everyone to
+        understand, no matter their background!
+      </p>
+
+      <p>
+        There is also a more personal reason I am drawn to SpaceX. I attend
+        Florida Tech in Melbourne and have built my life here on the Space Coast.
+        I get to see launches from where I live, and Cape Canaveral is part of
+        the community I have come to call home. I want to stay on the Space Coast
+        after graduating, and I would love for the analytical skills I have spent
+        my undergraduate career developing to contribute to the launch operations
+        happening just up the road.
+      </p>
+
+      <p>
+        I know I am early in my career, and I am not going to pretend I have
+        already mastered every system or technology listed in the job description.
+        What I can bring is a strong quantitative foundation, experience with
+        Python and data analysis, exposure to both technical research and
+        real-world operations, and a genuine willingness to learn the things I
+        do not know yet. Between being an NCAA student-athlete, working in
+        research, completing internships, and maintaining a demanding academic
+        schedule, I know I would be an asset to your hardworking team.
+      </p>
+
+      <p>
+        I became an applied mathematician because I wanted to solve real problems,
+        and I would love to do that for a company like SpaceX.
+      </p>
+
+      <p>
+        Thank you for your time and consideration. I would be incredibly excited
+        for the opportunity to contribute to the Launch Supply Chain team at
+        Cape Canaveral.
+      </p>
+
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<footer>
-  <span>Brieleigh Wescott</span>
-  <span>Data & Analytics Portfolio</span>
-</footer>
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="section-label">TECHNICAL TOOLKIT</div>
+
+    <h2>Skills &amp; Tools</h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-box">
+        <h3>Programming</h3>
+        <p>
+          Python<br>
+          R<br>
+          SQL<br>
+          Java
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Data &amp; Analytics</h3>
+        <p>
+          BigQuery<br>
+          Excel<br>
+          Data Cleaning<br>
+          Statistical Modeling<br>
+          Predictive Modeling
+        </p>
+      </div>
+
+      <div class="skill-box">
+        <h3>Quantitative</h3>
+        <p>
+          Optimization<br>
+          Data Visualization<br>
+          Feature Extraction<br>
+          Data Pipelines<br>
+          Analytical Reporting
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    Brieleigh Wescott · Applied Mathematics · Florida Institute of Technology
+  </footer>
 
 </body>
 </html>
