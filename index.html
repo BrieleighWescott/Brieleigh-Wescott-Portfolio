@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Brieleigh Wescott — applied mathematics student, researcher, and NCAA swimmer.">
+<meta name="description" content="Brieleigh Wescott — applied mathematics student, researcher, NCAA swimmer, and writer.">
 <title>Brieleigh Wescott | Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -554,8 +554,6 @@ footer {
 
     <div class="research-grid">
 
-      <!-- LUNG CANCER RADIOMICS -->
-
       <article class="research-card">
         <div class="research-symbol">✦</div>
 
@@ -584,8 +582,6 @@ footer {
           Python · R · CT Imaging · Feature Analysis
         </div>
       </article>
-
-      <!-- GENOMIC SURVIVAL ANALYSIS -->
 
       <article class="research-card">
         <div class="research-symbol">🧬</div>
@@ -649,21 +645,10 @@ footer {
     </div>
 
     <div class="filters" role="group" aria-label="Filter projects">
-      <button class="filter" data-filter="all" aria-pressed="true">
-        All
-      </button>
-
-      <button class="filter" data-filter="data" aria-pressed="false">
-        Data
-      </button>
-
-      <button class="filter" data-filter="finance" aria-pressed="false">
-        Finance
-      </button>
-
-      <button class="filter" data-filter="other" aria-pressed="false">
-        Other
-      </button>
+      <button class="filter" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="data" aria-pressed="false">Data</button>
+      <button class="filter" data-filter="finance" aria-pressed="false">Finance</button>
+      <button class="filter" data-filter="other" aria-pressed="false">Other</button>
     </div>
 
     <div id="project-grid" class="grid"></div>
@@ -751,18 +736,15 @@ footer {
       <div class="about-copy">
 
         <p>
-          I'm an NCAA Division II swimmer at Florida Tech,
-          so a pretty normal part of my week involves waking
-          up at an hour when most people are still very
-          happily asleep. Swimming has been a huge part
-          of my life, and it's taught me a lot about showing
-          up, working hard, and being part of a team.
+          I'm an NCAA Division II swimmer at Florida Tech!
+          Swimming has been a huge part of my life, and it's
+          taught me a lot about showing up, working hard,
+          and being part of a team.
         </p>
 
         <p>
           I'm also a big reader. I love literature, which
-          explains the English minor and probably the number
-          of books I convince myself I have time to read.
+          explains the English minor and the novel I wrote.
         </p>
 
         <p>
@@ -774,15 +756,17 @@ footer {
         </p>
 
         <p>
-          And, most importantly, I have two cats. They
-          contribute absolutely nothing to my statistical
-          models, but they do a great job supervising
-          from my desk.
+          And, most importantly, I have two kittens:
+          Dorian (Orange) and Jinx (Black). They contribute
+          absolutely nothing to my statistical models,
+          but they do a great job supervising from my desk
+          and convincing recruiters to hire me because
+          they are cute.
         </p>
 
         <p>
-          So that's me: math, swimming, books, cats, and
-          a pretty strong tendency to find something
+          So that's me: math, swimming, books, cats,
+          and a pretty strong tendency to find something
           interesting in just about everything.
         </p>
 
@@ -817,12 +801,12 @@ footer {
 
             <img
               src="View recent photos.png"
-              alt="Brieleigh's two cats"
+              alt="Dorian and Jinx, Brieleigh's kittens"
               loading="lazy"
               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
 
             <span class="photo-fallback">
-              My two cats
+              Dorian and Jinx
             </span>
 
           </div>
@@ -868,14 +852,8 @@ footer {
 
 <footer>
   <div class="wrap footer-inner">
-    <span>
-      © <span id="year"></span> Brieleigh Wescott
-    </span>
-
-    <span>
-      Built with curiosity (and probably coffee).
-    </span>
-
+    <span>© <span id="year"></span> Brieleigh Wescott</span>
+    <span>Built with curiosity (and probably coffee).</span>
     <a href="#home">Back to top ↑</a>
   </div>
 </footer>
@@ -912,6 +890,7 @@ const projects = [
     category: "data",
     label: "Deep Learning / Music",
     symbol: "♫",
+    image: "BDA-mobile-webp.webp",
 
     description:
       "Developed and tuned a neural network to predict " +
@@ -1089,4 +1068,3 @@ renderProjects();
 
 </body>
 </html>
-
