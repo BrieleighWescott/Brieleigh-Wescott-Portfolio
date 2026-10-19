@@ -4,318 +4,512 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Brieleigh Wescott — scholar-athlete, applied mathematics student, and researcher.">
+<meta name="description" content="Brieleigh Wescott — applied mathematics student, NCAA swimmer, researcher, and writer.">
 <title>Brieleigh Wescott | Scholar-Athlete & Applied Mathematics</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
 <style>
 :root {
-  --bg:#fffaf9;
-  --paper:#f6e9eb;
-  --ink:#171719;
-  --muted:#5e5559;
-  --accent:#a6192e;
-  --line:#e6cdd2;
-  --white:#fff;
+  --bg: #fffaf9;
+  --paper: #f6e9eb;
+  --ink: #171719;
+  --muted: #5e5559;
+  --accent: #a6192e;
+  --line: #e6cdd2;
+  --white: #fff;
 }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font:15px/1.8 'DM Sans',sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.8 'DM Sans', sans-serif;
 }
-a { color:inherit; text-decoration:none; }
-a:focus-visible,button:focus-visible {
-  outline:3px solid var(--accent);
-  outline-offset:4px;
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.wrap { width:min(1120px,90%); margin:auto; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
 .eyebrow {
-  font-size:11px;
-  letter-spacing:2.3px;
-  text-transform:uppercase;
-  color:var(--accent);
-  font-weight:700;
+  font-size: 11px;
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
 }
-h1,h2,h3 {
-  font-family:'Playfair Display',serif;
-  font-weight:400;
-  line-height:1.2;
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.2;
 }
+
 h1 {
-  font-size:clamp(58px,9vw,112px);
-  letter-spacing:-.045em;
-  margin:18px 0 25px;
+  font-size: clamp(58px, 9vw, 112px);
+  letter-spacing: -.045em;
+  margin: 18px 0 25px;
 }
+
 h2 {
-  font-size:clamp(39px,5vw,62px);
-  letter-spacing:-.025em;
-  margin:12px 0 24px;
+  font-size: clamp(39px, 5vw, 62px);
+  letter-spacing: -.025em;
+  margin: 12px 0 24px;
 }
-h3 { font-size:26px; margin:12px 0; }
-em { font-weight:400; color:var(--accent); }
-p { margin:0 0 17px; }
+
+h3 {
+  font-size: 26px;
+  margin: 12px 0;
+}
+
+em {
+  font-weight: 400;
+  color: var(--accent);
+}
+
+p {
+  margin: 0 0 17px;
+}
+
 .lead {
-  font-size:18px;
-  color:var(--muted);
-  max-width:710px;
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 710px;
 }
+
+/* NAVIGATION */
+
 .topbar {
-  position:sticky;
-  top:0;
-  background:rgba(255,250,249,.97);
-  border-bottom:1px solid var(--line);
-  z-index:10;
-  backdrop-filter:blur(12px);
+  position: sticky;
+  top: 0;
+  background: rgba(255, 250, 249, .97);
+  border-bottom: 1px solid var(--line);
+  z-index: 10;
+  backdrop-filter: blur(12px);
 }
+
 nav {
-  min-height:75px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
-.brand { font:600 22px 'Playfair Display',serif; }
+
+.brand {
+  font: 600 22px 'Playfair Display', serif;
+}
+
 .brand::after {
-  content:"";
-  display:inline-block;
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:var(--accent);
-  margin-left:4px;
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 4px;
 }
+
 .links {
-  display:flex;
-  gap:28px;
-  flex-wrap:wrap;
-  font-size:13px;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-size: 13px;
 }
-.links a:hover,.under:hover { color:var(--accent); }
-section { padding:105px 0; scroll-margin-top:76px; }
+
+.links a:hover,
+.under:hover {
+  color: var(--accent);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 105px 0;
+  scroll-margin-top: 76px;
+}
+
+.paper {
+  background: var(--paper);
+}
+
+.section-intro {
+  margin-bottom: 38px;
+}
+
+/* HERO */
+
 .hero {
-  padding:130px 0 150px;
-  border-top:5px solid var(--accent);
+  padding: 130px 0 150px;
+  border-top: 5px solid var(--accent);
 }
-.hero .lead { font-size:20px; max-width:720px; }
-.hero h1 { max-width:1000px; }
-.hero p { max-width:720px; }
+
+.hero .lead {
+  font-size: 20px;
+  max-width: 720px;
+}
+
+.hero h1 {
+  max-width: 1000px;
+}
+
+.hero p {
+  max-width: 720px;
+}
+
 .btn {
-  display:inline-block;
-  background:var(--ink);
-  color:white;
-  padding:13px 25px;
-  font-size:13px;
-  margin:22px 20px 0 0;
-  transition:background .2s;
+  display: inline-block;
+  background: var(--ink);
+  color: white;
+  padding: 13px 25px;
+  font-size: 13px;
+  margin: 22px 20px 0 0;
+  transition: background .2s;
 }
-.btn:hover { background:var(--accent); }
+
+.btn:hover {
+  background: var(--accent);
+}
+
 .under {
-  display:inline-block;
-  border-bottom:1px solid var(--accent);
-  padding-bottom:4px;
-  font-size:13px;
+  display: inline-block;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 4px;
+  font-size: 13px;
 }
-.paper { background:var(--paper); }
-.section-intro { margin-bottom:38px; }
-.filters {
-  display:flex;
-  flex-wrap:wrap;
-  gap:9px;
-  margin:30px 0;
-}
-.filter {
-  border:1px solid var(--line);
-  background:transparent;
-  font:inherit;
-  font-size:12px;
-  padding:9px 17px;
-  cursor:pointer;
-}
-.filter[aria-pressed="true"],.filter:hover {
-  background:var(--ink);
-  color:white;
-}
-.grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:23px;
-}
-.project {
-  background:var(--white);
-  border:1px solid var(--line);
-  overflow:hidden;
-  box-shadow:0 4px 20px rgba(23,23,25,.035);
-}
-.project img,.placeholder {
-  display:block;
-  width:100%;
-  height:205px;
-  object-fit:cover;
-}
-.placeholder {
-  display:grid;
-  place-items:center;
-  background:#eed9de;
-  color:#a6192e;
-  font:italic 50px 'Playfair Display',serif;
-}
-.project-body { padding:24px; }
-.project-type {
-  font-size:10px;
-  letter-spacing:1.6px;
-  text-transform:uppercase;
-  color:var(--accent);
-  font-weight:700;
-}
-.project-body p {
-  font-size:13px;
-  color:var(--muted);
-  min-height:95px;
-}
-.tags {
-  font-size:11px;
-  color:var(--muted);
-  margin:18px 0;
-}
-.project-link {
-  font-size:12px;
-  border-bottom:1px solid var(--accent);
-  padding-bottom:3px;
-}
+
+/* MOSAIC LAB */
+
 .research-grid {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:24px;
-  margin-top:35px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
 }
+
 .research-card {
-  background:var(--white);
-  border:1px solid var(--line);
-  border-top:4px solid var(--accent);
-  padding:32px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  padding: 32px;
 }
+
 .research-card p {
-  color:var(--muted);
-  font-size:14px;
+  color: var(--muted);
+  font-size: 14px;
 }
+
 .research-symbol {
-  font-size:42px;
-  margin-bottom:15px;
+  font-size: 42px;
+  margin-bottom: 15px;
 }
+
 .research-note {
-  font-size:12px;
-  color:var(--muted);
-  margin-top:22px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 22px;
 }
+
+/* PROJECTS */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 30px 0;
+}
+
+.filter {
+  border: 1px solid var(--line);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  padding: 9px 17px;
+  cursor: pointer;
+}
+
+.filter[aria-pressed="true"],
+.filter:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.project {
+  background: var(--white);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(23, 23, 25, .035);
+}
+
+.project img,
+.placeholder {
+  display: block;
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+}
+
+.placeholder {
+  display: grid;
+  place-items: center;
+  background: #eed9de;
+  color: #a6192e;
+  font: italic 50px 'Playfair Display', serif;
+}
+
+.project-body {
+  padding: 24px;
+}
+
+.project-type {
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.project-body p {
+  font-size: 13px;
+  color: var(--muted);
+  min-height: 95px;
+}
+
+.tags {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 18px 0;
+}
+
+.project-link {
+  font-size: 12px;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 3px;
+}
+
+.project-link:hover {
+  color: var(--accent);
+}
+
+/* WHY APPLIED MATH */
+
 .math-layout {
-  display:grid;
-  grid-template-columns:.95fr 1.05fr;
-  gap:85px;
-  align-items:start;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 85px;
+  align-items: start;
 }
-.math-layout p { color:var(--muted); }
+
+.math-layout p {
+  color: var(--muted);
+}
+
 .math-note {
-  padding:27px;
-  border-left:2px solid var(--accent);
-  background:rgba(255,255,255,.72);
-  font-family:'Playfair Display',serif;
-  font-size:23px;
-  line-height:1.5;
+  padding: 27px;
+  border-left: 2px solid var(--accent);
+  background: rgba(255, 255, 255, .72);
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  line-height: 1.5;
 }
-.about-intro { max-width:770px; }
+
+/* ABOUT ME */
+
+.about-intro {
+  max-width: 770px;
+}
+
 .about-grid {
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:65px;
-  margin-top:35px;
-  align-items:start;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 65px;
+  margin-top: 35px;
+  align-items: start;
 }
-.about-copy p { color:var(--muted); }
+
+.about-copy p {
+  color: var(--muted);
+}
+
 .photos {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
-.photo-slot { margin:0; }
+
+.photo-slot {
+  margin: 0;
+}
+
 .photo-frame {
-  aspect-ratio:4/5;
-  background:#eed9de;
-  display:grid;
-  place-items:center;
-  overflow:hidden;
-  position:relative;
+  aspect-ratio: 4/5;
+  background: #eed9de;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
 }
+
 .photo-frame img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
 .photo-fallback {
-  padding:16px;
-  text-align:center;
-  color:#8f2536;
-  font:italic 21px 'Playfair Display',serif;
+  padding: 16px;
+  text-align: center;
+  color: #8f2536;
+  font: italic 21px 'Playfair Display', serif;
 }
+
+.photo-frame:has(img:not([style*="display: none"])) .photo-fallback {
+  display: none;
+}
+
+figcaption {
+  font-size: 12px;
+  color: var(--muted);
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* CONTACT */
+
 .contact-strip {
-  border-top:1px solid var(--line);
-  margin-top:70px;
-  padding-top:32px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
+  border-top: 1px solid var(--line);
+  margin-top: 70px;
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
-.contact-strip h3 { margin:0 0 5px; }
+
+.contact-strip h3 {
+  margin: 0 0 5px;
+}
+
 .contact-strip p {
-  font-size:13px;
-  color:var(--muted);
+  font-size: 13px;
+  color: var(--muted);
 }
+
+/* FOOTER */
+
 footer {
-  border-top:1px solid var(--line);
-  padding:26px 0;
-  font-size:12px;
-  color:var(--muted);
+  border-top: 1px solid var(--line);
+  padding: 26px 0;
+  font-size: 12px;
+  color: var(--muted);
 }
+
 .footer-inner {
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
-@media(max-width:850px) {
-  .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .math-layout,.about-grid {
-    grid-template-columns:1fr;
-    gap:30px;
+
+/* MOBILE */
+
+@media(max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .hero { padding:95px 0; }
-}
-@media(max-width:700px) {
-  .research-grid { grid-template-columns:1fr; }
-}
-@media(max-width:580px) {
-  nav { flex-direction:column; padding:14px 0; }
-  .links { gap:15px; justify-content:center; }
-  .grid { grid-template-columns:1fr; }
-  .photos { gap:10px; }
-  section { padding:75px 0; }
-  .hero { padding:90px 0; }
-  .contact-strip,.footer-inner {
-    flex-direction:column;
-    align-items:start;
+
+  .math-layout,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  .project-body p { min-height:0; }
+
+  .hero {
+    padding: 95px 0;
+  }
+}
+
+@media(max-width: 700px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 580px) {
+  nav {
+    flex-direction: column;
+    padding: 14px 0;
+  }
+
+  .links {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photos {
+    gap: 10px;
+  }
+
+  section {
+    padding: 75px 0;
+  }
+
+  .hero {
+    padding: 90px 0;
+  }
+
+  .contact-strip,
+  .footer-inner {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .project-body p {
+    min-height: 0;
+  }
 }
 </style>
 </head>
+
 <body>
+
+<!-- NAVIGATION -->
 
 <header class="topbar">
   <nav class="wrap" aria-label="Main navigation">
     <a class="brand" href="#home">Brieleigh Wescott.</a>
+
     <div class="links">
       <a href="#mosaic">MOSAIC Lab</a>
       <a href="#projects">Projects</a>
@@ -327,12 +521,16 @@ footer {
 
 <main>
 
+<!-- HOMEPAGE -->
+
 <section class="hero wrap" id="home">
+
   <div class="eyebrow">
     Florida Tech · Scholar-Athlete · Class of 2027
   </div>
 
-  <h1>Scholar. Athlete.<br>
+  <h1>
+    Scholar. Athlete.<br>
     <em>A little bit of everything.</em>
   </h1>
 
@@ -348,17 +546,31 @@ footer {
     category.
   </p>
 
-  <a class="btn" href="#projects">See My Projects ↗</a>
-  <a class="under" href="#about">A Little About Me ↗</a>
+  <a class="btn" href="#projects">
+    See My Projects ↗
+  </a>
+
+  <a class="under" href="#about">
+    A Little About Me ↗
+  </a>
+
 </section>
+
+<!-- MOSAIC LAB RESEARCH -->
 
 <section id="mosaic">
   <div class="wrap">
+
     <div class="section-intro">
-      <div class="eyebrow">01 / RESEARCH AT FLORIDA TECH</div>
-      <h2>So, what do I actually do in a
+      <div class="eyebrow">
+        01 / RESEARCH AT FLORIDA TECH
+      </div>
+
+      <h2>
+        So, what do I actually do in a
         <em>cancer research lab?</em>
       </h2>
+
       <p class="lead">
         At Florida Tech's MOSAIC Lab, I work with cancer data
         and try to find patterns that might actually be useful.
@@ -370,12 +582,18 @@ footer {
 
     <div class="research-grid">
 
+      <!-- LUNG RADIOMICS -->
+
       <article class="research-card">
-        <div class="research-symbol" aria-hidden="true">✦</div>
+
+        <div class="research-symbol">✦</div>
+
         <div class="project-type">
           Medical Imaging / Radiomics
         </div>
+
         <h3>Lung Cancer Radiomics</h3>
+
         <p>
           CT scans aren't just pictures. We can turn them into
           numerical features describing things like texture,
@@ -384,6 +602,7 @@ footer {
           including how much those assessments can differ
           between doctors.
         </p>
+
         <p>
           One big question is whether the numbers we extract
           are consistent enough to be useful. It's a surprisingly
@@ -391,23 +610,32 @@ footer {
           figuring out why four people can look at the same
           thing and disagree.
         </p>
+
         <div class="tags">
           Python · R · CT Imaging · Feature Analysis
         </div>
+
       </article>
 
+      <!-- GENOMIC SURVIVAL -->
+
       <article class="research-card">
-        <div class="research-symbol" aria-hidden="true">🧬</div>
+
+        <div class="research-symbol">🧬</div>
+
         <div class="project-type">
           Genomics / Survival Analysis
         </div>
+
         <h3>Genomic Survival Analysis</h3>
+
         <p>
           For this project, I work with gene-expression and
           clinical data from lung cancer patients to explore
           whether genetic information can help us understand
           survival outcomes.
         </p>
+
         <p>
           I use statistical survival models, including Cox
           regression, and compare models built from clinical
@@ -416,9 +644,11 @@ footer {
           choosing useful signals without overfitting is a
           pretty big part of the challenge.
         </p>
+
         <div class="tags">
           R · Cox Regression · Genomics · Model Validation
         </div>
+
       </article>
 
     </div>
@@ -428,54 +658,90 @@ footer {
       I'm working on rather than posting research datasets
       or unfinished results.
     </p>
+
   </div>
 </section>
 
+<!-- PROJECTS -->
+
 <section class="paper" id="projects">
   <div class="wrap">
+
     <div class="section-intro">
-      <div class="eyebrow">02 / OTHER PROJECTS</div>
-      <h2>What else have I <em>been working on?</em></h2>
+
+      <div class="eyebrow">
+        02 / OTHER PROJECTS
+      </div>
+
+      <h2>
+        What else have I
+        <em>been working on?</em>
+      </h2>
+
       <p class="lead">
         A mix of deep learning, finance, data analysis,
         business, and a novel. Apparently I don't have
         one very specific hobby.
       </p>
+
     </div>
 
     <div class="filters" role="group" aria-label="Filter projects">
-      <button class="filter" data-filter="all"
-        aria-pressed="true">All</button>
-      <button class="filter" data-filter="data"
-        aria-pressed="false">Data</button>
-      <button class="filter" data-filter="finance"
-        aria-pressed="false">Finance</button>
-      <button class="filter" data-filter="other"
-        aria-pressed="false">Other</button>
+
+      <button class="filter" data-filter="all" aria-pressed="true">
+        All
+      </button>
+
+      <button class="filter" data-filter="data" aria-pressed="false">
+        Data
+      </button>
+
+      <button class="filter" data-filter="finance" aria-pressed="false">
+        Finance
+      </button>
+
+      <button class="filter" data-filter="other" aria-pressed="false">
+        Other
+      </button>
+
     </div>
 
     <div id="project-grid" class="grid"></div>
+
   </div>
 </section>
 
+<!-- WHY APPLIED MATH -->
+
 <section id="why-math">
   <div class="wrap math-layout">
+
     <div>
-      <div class="eyebrow">03 / THE QUESTION I GET A LOT</div>
-      <h2>Why <em>applied</em> math?</h2>
+
+      <div class="eyebrow">
+        03 / THE QUESTION I GET A LOT
+      </div>
+
+      <h2>
+        Why <em>applied</em> math?
+      </h2>
+
       <div class="math-note">
         Because I like knowing what I can actually
         <em>do</em> with the math.
       </div>
+
     </div>
 
     <div>
+
       <p>
         Whenever I tell someone I'm a math major, I think
         they assume I spend all day solving equations for fun.
         And while I've definitely done my fair share of proofs,
         that's not really why I chose it.
       </p>
+
       <p>
         Pure mathematics often focuses on understanding
         mathematical ideas themselves: why things work,
@@ -484,6 +750,7 @@ footer {
         what we can do with them in the real world.
         There's overlap, of course, and both matter.
       </p>
+
       <p>
         That's the part I love. One day I can use statistics
         to study cancer data, the next I can work on investment
@@ -491,6 +758,7 @@ footer {
         data. Completely different problems, but the same
         way of thinking.
       </p>
+
       <p>
         I'm studying Applied Mathematics with a concentration
         in Artificial Intelligence and Data Science, plus
@@ -498,21 +766,34 @@ footer {
         minor might seem like a plot twist, but I like that my
         interests don't all fit in one box.
       </p>
+
     </div>
+
   </div>
 </section>
 
+<!-- ABOUT ME -->
+
 <section class="paper" id="about">
   <div class="wrap">
-    <div class="eyebrow">04 / THE PERSON BEHIND THE COMPUTER</div>
-    <h2>A little <em>about me.</em></h2>
+
+    <div class="eyebrow">
+      04 / THE PERSON BEHIND THE COMPUTER
+    </div>
+
+    <h2>
+      A little <em>about me.</em>
+    </h2>
+
     <p class="lead about-intro">
       There's more to me than datasets and homework.
       Thankfully.
     </p>
 
     <div class="about-grid">
+
       <div class="about-copy">
+
         <p>
           I'm an NCAA Division II swimmer at Florida Tech,
           so a pretty normal part of my week involves waking
@@ -548,153 +829,249 @@ footer {
           a pretty strong tendency to find something
           interesting in just about everything.
         </p>
+
       </div>
 
+      <!-- PHOTOS -->
+
       <div class="photos">
+
+        <!-- SWIMMING PHOTO -->
+
         <figure class="photo-slot">
+
           <div class="photo-frame">
-            <img src="swimming.jpg" alt="Brieleigh swimming"
+
+            <img
+              src="B112B575-62CA-499B-B1F8-E968AFB8D868.jpg"
+              alt="Brieleigh swimming for Florida Tech"
+              loading="lazy"
               onerror="this.style.display='none'">
+
             <span class="photo-fallback">
-              Your swim photo goes here
+              Swimming photo
             </span>
+
           </div>
+
           <figcaption>
             In my natural habitat (the pool).
           </figcaption>
+
         </figure>
 
+        <!-- CAT PHOTO -->
+
         <figure class="photo-slot">
+
           <div class="photo-frame">
-            <img src="cats.jpg" alt="Brieleigh's two cats"
+
+            <img
+              src="View recent photos.png"
+              alt="Brieleigh's two cats"
+              loading="lazy"
               onerror="this.style.display='none'">
+
             <span class="photo-fallback">
-              Your cat photo goes here
+              My two cats
             </span>
+
           </div>
+
           <figcaption>
             The real bosses around here.
           </figcaption>
+
         </figure>
+
       </div>
+
     </div>
 
+    <!-- CONTACT -->
+
     <div class="contact-strip">
+
       <div>
         <h3>Want to say hi?</h3>
+
         <p>
           I'm always happy to connect, whether it's about
           work, research, or something completely different.
         </p>
       </div>
 
-      <a class="btn"
-         href="https://www.linkedin.com/search/results/people/?keywords=Brieleigh%20Wescott"
-         target="_blank" rel="noopener noreferrer">
+      <a
+        class="btn"
+        href="https://www.linkedin.com/search/results/people/?keywords=Brieleigh%20Wescott"
+        target="_blank"
+        rel="noopener noreferrer">
         Find Me on LinkedIn ↗
       </a>
+
     </div>
+
   </div>
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
   <div class="wrap footer-inner">
-    <span>© <span id="year"></span> Brieleigh Wescott</span>
-    <span>Built with curiosity (and probably coffee).</span>
-    <a href="#home">Back to top ↑</a>
+
+    <span>
+      © <span id="year"></span> Brieleigh Wescott
+    </span>
+
+    <span>
+      Built with curiosity (and probably coffee).
+    </span>
+
+    <a href="#home">
+      Back to top ↑
+    </a>
+
   </div>
 </footer>
 
+<!-- JAVASCRIPT -->
+
 <script>
+
 const repo =
   "https://github.com/BrieleighWescott/" +
   "Brieleigh-Wescott-Portfolio/blob/main/";
 
-const projectHome =
-  "https://github.com/BrieleighWescott/" +
-  "Brieleigh-Wescott-Portfolio";
-
 const projects = [
+
+  // FINANCIAL PORTFOLIO
+
   {
     title: "Financial Portfolio Optimization",
     category: "finance",
     label: "Finance / Optimization",
     symbol: "💵",
+    image: "portfolio-optimization.jpg",
+
     description:
       "Exploring how math can help balance investment " +
       "risk and return. The stock market doesn't always " +
       "cooperate with the equations.",
+
     tags: "R · Finance · Optimization",
+
     file: "MTH 3017 Project Report (Draft 1) (4).pdf"
   },
+
+  // SPOTIFY DEEP LEARNING
+
   {
     title: "Spotify Popularity Prediction",
     category: "data",
     label: "Deep Learning / Music",
     symbol: "♫",
+
     description:
       "Can you predict how popular a song will be from " +
       "its audio features? I trained and tuned a neural " +
       "network on a dataset of roughly 114,000 tracks " +
       "to find out. Turns out predicting taste in music " +
       "is not exactly easy.",
+
     tags: "Python · Neural Networks · Machine Learning",
-    url: projectHome
+
+    file:
+      "Predicting Spotify Song Popularity Using Neural Networks (5).pdf"
   },
+
+  // EPA AIR QUALITY
+
   {
     title: "EPA Air Quality Analysis",
     category: "data",
     label: "Environment / Data",
     symbol: "☀",
+    image: "epa-data.jpg",
+
     description:
       "Digging into environmental data to see what " +
       "patterns show up and what they actually mean.",
+
     tags: "Statistics · Visualization",
+
     file: "Project 2 Paper (13).pdf"
   },
+
+  // AMAZON SQL
+
   {
     title: "Amazon Marketplace SQL",
     category: "other",
     label: "Business / SQL",
     symbol: "📖",
+    image: "amazon-marketplace.jpg",
+
     description:
       "Using SQL to ask better questions about " +
       "marketplace data. Because even online shopping " +
       "has a data side.",
+
     tags: "SQL · Business Analytics",
+
     file: "SQL Guide (1).pdf"
   },
+
+  // NOVEL
+
   {
     title: "1:43 AM — A Novel",
     category: "other",
     label: "Creative Writing / Fiction",
     symbol: "✒",
+
+    image:
+      "depositphotos_340697192-stock-photo-beautiful-ancient-books-pattern-background.jpg",
+
     description:
       "I wrote a psychological suspense novel called " +
       "1:43 AM. Turns out I enjoy making up problems " +
       "for fictional people almost as much as " +
       "solving real ones.",
+
     tags: "Creative Writing · Psychological Suspense",
-    url: projectHome
+
+    file: "1_43am- Brieleigh Wescott.pdf"
   }
+
 ];
 
+/* FALLBACK FOR MISSING PROJECT IMAGES */
+
 function makePlaceholder(symbol) {
+
   const el = document.createElement("div");
+
   el.className = "placeholder";
   el.textContent = symbol;
+
   return el;
+
 }
 
+/* CREATE PROJECT CARDS */
+
 function renderProjects(filter = "all") {
+
   const grid = document.getElementById("project-grid");
+
   grid.replaceChildren();
 
   projects
     .filter(p => filter === "all" || p.category === filter)
     .forEach(p => {
+
       const article = document.createElement("article");
       article.className = "project";
 
@@ -703,12 +1080,17 @@ function renderProjects(filter = "all") {
         : makePlaceholder(p.symbol || "✦");
 
       if (p.image) {
+
         visual.src = p.image;
         visual.alt = p.title;
         visual.loading = "lazy";
+
         visual.onerror = () => {
-          visual.replaceWith(makePlaceholder(p.symbol || "✦"));
+          visual.replaceWith(
+            makePlaceholder(p.symbol || "✦")
+          );
         };
+
       }
 
       article.appendChild(visual);
@@ -734,9 +1116,11 @@ function renderProjects(filter = "all") {
 
       const link = document.createElement("a");
       link.className = "project-link";
-      link.href = p.file
-        ? repo + p.file.split("/").map(encodeURIComponent).join("/")
-        : p.url;
+
+      link.href =
+        repo +
+        p.file.split("/").map(encodeURIComponent).join("/");
+
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       link.textContent = "View Project ↗";
@@ -744,24 +1128,38 @@ function renderProjects(filter = "all") {
       body.appendChild(link);
       article.appendChild(body);
       grid.appendChild(article);
+
     });
+
 }
 
+/* FILTER BUTTONS */
+
 document.querySelectorAll(".filter").forEach(btn => {
+
   btn.addEventListener("click", () => {
+
     document.querySelectorAll(".filter").forEach(b => {
       b.setAttribute("aria-pressed", "false");
     });
 
     btn.setAttribute("aria-pressed", "true");
+
     renderProjects(btn.dataset.filter);
+
   });
+
 });
+
+/* CURRENT YEAR */
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
+/* LOAD ALL PROJECTS */
+
 renderProjects();
+
 </script>
 
 </body>
