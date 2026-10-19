@@ -1,1067 +1,768 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Brieleigh Wescott | Interview Portfolio</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background:
-        radial-gradient(circle at 20% 10%, rgba(29, 102, 184, 0.16), transparent 30%),
-        radial-gradient(circle at 80% 30%, rgba(37, 137, 255, 0.12), transparent 32%),
-        #06111f;
-
-      color: #f5f9ff;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* NAVIGATION */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      background: rgba(4, 16, 31, 0.94);
-      border-bottom: 1px solid rgba(91, 164, 255, 0.25);
-
-      backdrop-filter: blur(12px);
-    }
-
-    .nav-container {
-      max-width: 1250px;
-      margin: auto;
-      padding: 18px 30px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 19px;
-      font-weight: 800;
-      letter-spacing: 2px;
-
-      color: #76b8ff;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-
-      font-size: 13px;
-      letter-spacing: 1px;
-
-      color: #abc7e7;
-    }
-
-    .nav-links a {
-      transition: 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: #5da9ff;
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 90vh;
-
-      display: flex;
-      align-items: center;
-
-      max-width: 1250px;
-      margin: auto;
-
-      padding: 75px 30px 90px;
-    }
-
-    .hero-grid {
-      width: 100%;
-
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 70px;
-
-      align-items: center;
-    }
-
-    .hero-content {
-      max-width: 720px;
-    }
-
-    .eyebrow {
-      color: #5da9ff;
-
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2.6px;
-
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 7vw, 88px);
-
-      line-height: 1;
-      letter-spacing: -4px;
-
-      margin-bottom: 30px;
-    }
-
-    .name-accent {
-      color: #66b4ff;
-    }
-
-    .intro {
-      max-width: 700px;
-
-      color: #bed1e7;
-
-      font-size: 18px;
-      line-height: 1.8;
-
-      margin-bottom: 35px;
-    }
-
-    .hero-image-wrap {
-      position: relative;
-    }
-
-    .hero-image-wrap::before {
-      content: "";
-
-      position: absolute;
-      inset: -14px;
-
-      border: 1px solid rgba(79, 161, 255, 0.25);
-
-      border-radius: 24px;
-
-      transform: rotate(2deg);
-    }
-
-    .hero-image {
-      width: 100%;
-      height: 520px;
-
-      display: block;
-
-      object-fit: cover;
-
-      border-radius: 20px;
-
-      border: 1px solid rgba(97, 177, 255, 0.35);
-
-      box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.45),
-        0 0 40px rgba(53, 139, 255, 0.12);
-
-      position: relative;
-      z-index: 2;
-    }
-
-    /* BUTTONS */
-
-    .button {
-      display: inline-block;
-
-      padding: 13px 22px;
-
-      border: 1px solid #4297f5;
-      border-radius: 5px;
-
-      margin-right: 12px;
-      margin-top: 10px;
-
-      color: #83c2ff;
-
-      font-size: 13px;
-      font-weight: 700;
-
-      letter-spacing: 0.5px;
-
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: #4ca2ff;
-
-      color: #03101d;
-
-      border-color: #4ca2ff;
-
-      transform: translateY(-2px);
-
-      box-shadow: 0 8px 25px rgba(39, 139, 255, 0.22);
-    }
-
-    /* GENERAL */
-
-    section {
-      max-width: 1250px;
-
-      margin: auto;
-
-      padding: 95px 30px;
-    }
-
-    .section-label {
-      color: #54a8ff;
-
-      font-size: 12px;
-      font-weight: 800;
-
-      letter-spacing: 3px;
-
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      font-size: clamp(35px, 5vw, 58px);
-
-      line-height: 1.1;
-      letter-spacing: -2px;
-
-      margin-bottom: 45px;
-    }
-
-    /* PROJECTS */
-
-    #work {
-      border-top: 1px solid rgba(109, 171, 240, 0.15);
-    }
-
-    .project {
-      padding: 45px 0;
-
-      display: grid;
-      grid-template-columns: 65px 300px 1fr;
-
-      gap: 35px;
-
-      align-items: center;
-
-      border-top: 1px solid rgba(117, 173, 233, 0.18);
-    }
-
-    .project:last-child {
-      border-bottom: 1px solid rgba(117, 173, 233, 0.18);
-    }
-
-    .project-number {
-      align-self: start;
-
-      color: #4da3ff;
-
-      font-size: 16px;
-      font-weight: 800;
-
-      letter-spacing: 2px;
-
-      padding-top: 8px;
-    }
-
-    .project-image-wrap {
-      overflow: hidden;
-
-      border-radius: 14px;
-
-      border: 1px solid rgba(89, 169, 255, 0.3);
-
-      background: #09192a;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 220px;
-
-      display: block;
-
-      object-fit: cover;
-
-      transition: transform 0.35s ease;
-    }
-
-    .project:hover .project-image {
-      transform: scale(1.035);
-    }
-
-    .project-content {
-      max-width: 720px;
-    }
-
-    .project h3 {
-      font-size: 29px;
-
-      line-height: 1.25;
-
-      margin-bottom: 17px;
-
-      color: #ffffff;
-    }
-
-    .project p {
-      color: #afc6de;
-
-      font-size: 15.5px;
-      line-height: 1.8;
-
-      max-width: 740px;
-
-      margin-bottom: 18px;
-    }
-
-    /* TAGS */
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 8px;
-
-      margin: 20px 0;
-    }
-
-    .tag {
-      border: 1px solid rgba(73, 157, 252, 0.35);
-
-      background: rgba(52, 130, 218, 0.08);
-
-      color: #75b9ff;
-
-      padding: 6px 10px;
-
-      border-radius: 4px;
-
-      font-size: 10px;
-
-      letter-spacing: 1px;
-
-      text-transform: uppercase;
-    }
-
-    .project-links {
-      margin-top: 22px;
-    }
-
-    /* ABOUT */
-
-    #about {
-      border-top: 1px solid rgba(109, 171, 240, 0.15);
-    }
-
-    .about-content {
-      max-width: 970px;
-    }
-
-    .about-content h2 {
-      color: #ffffff;
-    }
-
-    .about-content p {
-      color: #b3c9df;
-
-      font-size: 16px;
-      line-height: 1.9;
-
-      margin-bottom: 24px;
-    }
-
-    /* ABOUT DECORATION */
-
-    .about-box {
-      border-left: 3px solid #489eff;
-
-      padding-left: 35px;
-    }
-
-    /* SKILLS */
-
-    #skills {
-      border-top: 1px solid rgba(109, 171, 240, 0.15);
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-
-      gap: 20px;
-    }
-
-    .skill-box {
-      min-height: 220px;
-
-      border: 1px solid rgba(90, 166, 248, 0.25);
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(15, 43, 73, 0.7),
-          rgba(7, 25, 44, 0.7)
-        );
-
-      padding: 30px;
-
-      border-radius: 12px;
-
-      transition: 0.25s ease;
-    }
-
-    .skill-box:hover {
-      transform: translateY(-4px);
-
-      border-color: #418fdf;
-
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .skill-number {
-      color: #4da3ff;
-
-      font-size: 11px;
-
-      letter-spacing: 2px;
-
-      margin-bottom: 22px;
-    }
-
-    .skill-box h3 {
-      margin-bottom: 15px;
-
-      font-size: 19px;
-    }
-
-    .skill-box p {
-      color: #a9bfd5;
-
-      line-height: 1.9;
-
-      font-size: 14px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid rgba(109, 171, 240, 0.15);
-
-      padding: 45px 30px;
-
-      text-align: center;
-
-      color: #718aa4;
-
-      font-size: 12px;
-      letter-spacing: 0.5px;
-
-      background: rgba(3, 14, 26, 0.45);
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 950px) {
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .hero {
-        padding-top: 110px;
-      }
-
-      .hero-image {
-        height: 420px;
-      }
-
-      .project {
-        grid-template-columns: 55px 240px 1fr;
-        gap: 25px;
-      }
-
-      .project-image {
-        height: 190px;
-      }
-    }
-
-    @media (max-width: 760px) {
-
-      .nav-links {
-        gap: 14px;
-        font-size: 11px;
-      }
-
-      .hero {
-        min-height: auto;
-
-        padding-top: 110px;
-        padding-bottom: 80px;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
-
-      .hero-image {
-        height: 340px;
-      }
-
-      section {
-        padding: 75px 22px;
-      }
-
-      .project {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-      }
-
-      .project-number {
-        padding-top: 0;
-      }
-
-      .project-image {
-        height: 260px;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-box {
-        padding-left: 20px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Brieleigh Wescott — scholar-athlete, applied mathematics student, and researcher.">
+<title>Brieleigh Wescott | Scholar-Athlete & Applied Mathematics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#fffaf9;
+  --paper:#f6e9eb;
+  --ink:#171719;
+  --muted:#5e5559;
+  --accent:#a6192e;
+  --line:#e6cdd2;
+  --white:#fff;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:15px/1.8 'DM Sans',sans-serif;
+}
+a { color:inherit; text-decoration:none; }
+a:focus-visible,button:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:4px;
+}
+.wrap { width:min(1120px,90%); margin:auto; }
+.eyebrow {
+  font-size:11px;
+  letter-spacing:2.3px;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:700;
+}
+h1,h2,h3 {
+  font-family:'Playfair Display',serif;
+  font-weight:400;
+  line-height:1.2;
+}
+h1 {
+  font-size:clamp(58px,9vw,112px);
+  letter-spacing:-.045em;
+  margin:18px 0 25px;
+}
+h2 {
+  font-size:clamp(39px,5vw,62px);
+  letter-spacing:-.025em;
+  margin:12px 0 24px;
+}
+h3 { font-size:26px; margin:12px 0; }
+em { font-weight:400; color:var(--accent); }
+p { margin:0 0 17px; }
+.lead {
+  font-size:18px;
+  color:var(--muted);
+  max-width:710px;
+}
+.topbar {
+  position:sticky;
+  top:0;
+  background:rgba(255,250,249,.97);
+  border-bottom:1px solid var(--line);
+  z-index:10;
+  backdrop-filter:blur(12px);
+}
+nav {
+  min-height:75px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.brand { font:600 22px 'Playfair Display',serif; }
+.brand::after {
+  content:"";
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-left:4px;
+}
+.links {
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+  font-size:13px;
+}
+.links a:hover,.under:hover { color:var(--accent); }
+section { padding:105px 0; scroll-margin-top:76px; }
+.hero {
+  padding:130px 0 150px;
+  border-top:5px solid var(--accent);
+}
+.hero .lead { font-size:20px; max-width:720px; }
+.hero h1 { max-width:1000px; }
+.hero p { max-width:720px; }
+.btn {
+  display:inline-block;
+  background:var(--ink);
+  color:white;
+  padding:13px 25px;
+  font-size:13px;
+  margin:22px 20px 0 0;
+  transition:background .2s;
+}
+.btn:hover { background:var(--accent); }
+.under {
+  display:inline-block;
+  border-bottom:1px solid var(--accent);
+  padding-bottom:4px;
+  font-size:13px;
+}
+.paper { background:var(--paper); }
+.section-intro { margin-bottom:38px; }
+.filters {
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin:30px 0;
+}
+.filter {
+  border:1px solid var(--line);
+  background:transparent;
+  font:inherit;
+  font-size:12px;
+  padding:9px 17px;
+  cursor:pointer;
+}
+.filter[aria-pressed="true"],.filter:hover {
+  background:var(--ink);
+  color:white;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:23px;
+}
+.project {
+  background:var(--white);
+  border:1px solid var(--line);
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(23,23,25,.035);
+}
+.project img,.placeholder {
+  display:block;
+  width:100%;
+  height:205px;
+  object-fit:cover;
+}
+.placeholder {
+  display:grid;
+  place-items:center;
+  background:#eed9de;
+  color:#a6192e;
+  font:italic 50px 'Playfair Display',serif;
+}
+.project-body { padding:24px; }
+.project-type {
+  font-size:10px;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:700;
+}
+.project-body p {
+  font-size:13px;
+  color:var(--muted);
+  min-height:95px;
+}
+.tags {
+  font-size:11px;
+  color:var(--muted);
+  margin:18px 0;
+}
+.project-link {
+  font-size:12px;
+  border-bottom:1px solid var(--accent);
+  padding-bottom:3px;
+}
+.research-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  margin-top:35px;
+}
+.research-card {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-top:4px solid var(--accent);
+  padding:32px;
+}
+.research-card p {
+  color:var(--muted);
+  font-size:14px;
+}
+.research-symbol {
+  font-size:42px;
+  margin-bottom:15px;
+}
+.research-note {
+  font-size:12px;
+  color:var(--muted);
+  margin-top:22px;
+}
+.math-layout {
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:85px;
+  align-items:start;
+}
+.math-layout p { color:var(--muted); }
+.math-note {
+  padding:27px;
+  border-left:2px solid var(--accent);
+  background:rgba(255,255,255,.72);
+  font-family:'Playfair Display',serif;
+  font-size:23px;
+  line-height:1.5;
+}
+.about-intro { max-width:770px; }
+.about-grid {
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:65px;
+  margin-top:35px;
+  align-items:start;
+}
+.about-copy p { color:var(--muted); }
+.photos {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+.photo-slot { margin:0; }
+.photo-frame {
+  aspect-ratio:4/5;
+  background:#eed9de;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  position:relative;
+}
+.photo-frame img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.photo-fallback {
+  padding:16px;
+  text-align:center;
+  color:#8f2536;
+  font:italic 21px 'Playfair Display',serif;
+}
+.contact-strip {
+  border-top:1px solid var(--line);
+  margin-top:70px;
+  padding-top:32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+.contact-strip h3 { margin:0 0 5px; }
+.contact-strip p {
+  font-size:13px;
+  color:var(--muted);
+}
+footer {
+  border-top:1px solid var(--line);
+  padding:26px 0;
+  font-size:12px;
+  color:var(--muted);
+}
+.footer-inner {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+@media(max-width:850px) {
+  .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .math-layout,.about-grid {
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .hero { padding:95px 0; }
+}
+@media(max-width:700px) {
+  .research-grid { grid-template-columns:1fr; }
+}
+@media(max-width:580px) {
+  nav { flex-direction:column; padding:14px 0; }
+  .links { gap:15px; justify-content:center; }
+  .grid { grid-template-columns:1fr; }
+  .photos { gap:10px; }
+  section { padding:75px 0; }
+  .hero { padding:90px 0; }
+  .contact-strip,.footer-inner {
+    flex-direction:column;
+    align-items:start;
+  }
+  .project-body p { min-height:0; }
+}
+</style>
 </head>
-
 <body>
 
-
-  <!-- NAVIGATION -->
-
-  <nav>
-
-    <div class="nav-container">
-
-      <a href="#" class="logo">
-        BW
-      </a>
-
-      <div class="nav-links">
-
-        <a href="#work">
-          PROJECTS
-        </a>
-
-        <a href="#about">
-          ABOUT
-        </a>
-
-        <a href="#skills">
-          SKILLS
-        </a>
-
-      </div>
-
+<header class="topbar">
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#home">Brieleigh Wescott.</a>
+    <div class="links">
+      <a href="#mosaic">MOSAIC Lab</a>
+      <a href="#projects">Projects</a>
+      <a href="#why-math">Why Applied Math?</a>
+      <a href="#about">About Me</a>
     </div>
-
   </nav>
-
-
-
-  <!-- HERO -->
-
-  <header class="hero">
-
-    <div class="hero-grid">
-
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          SUPPLY CHAIN SYSTEMS ANALYST (LAUNCH) — INTERVIEW
-        </div>
-
-        <h1>
-          Brieleigh
-          <span class="name-accent">Wescott.</span>
-        </h1>
-
-        <p class="intro">
-
-          Thank you for taking the time to speak with me!
-          I created this website as a quick and easy way to
-          access the projects and documents I would like to
-          discuss during our first interview.
-
-        </p>
-
-        <a
-          class="button"
-          href="#work">
-
-          VIEW MY WORK ↓
-
-        </a>
-
-      </div>
-
-
-      <div class="hero-image-wrap">
-
-        <img
-          class="hero-image"
-          src="Ptigqomxk7YvAJ6tEXCkr9.jpg"
-          alt="Rocket launch over the Space Coast">
-
-      </div>
-
-
-    </div>
-
-  </header>
-
-
-
-  <!-- PROJECTS -->
-
-  <section id="work">
-
-    <div class="section-label">
-      PROJECTS
-    </div>
-
-
-
-    <!-- PROJECT 01 -->
-
-    <div class="project">
-
-      <div class="project-number">
-        01
-      </div>
-
-
-      <div class="project-image-wrap">
-
-        <img
-          class="project-image"
-          src="cancer-imaging.jpg"
-          alt="Lung cancer imaging project">
-
-      </div>
-
-
-      <div class="project-content">
-
-        <h3>
-          3D Lung CT Radiomics Pipeline
-        </h3>
-
-        <p>
-
-          Below I have attached two documents.
-          The first is a presentation I recently gave to my
-          coworkers during our monthly progress check to
-          discuss the dataset I am currently working with.
-          The second is a quick example of the Python code
-          I used for this project.
-
-        </p>
-
-
-        <div class="tags">
-
-          <span class="tag">Python</span>
-          <span class="tag">PyLIDC</span>
-          <span class="tag">PyRadiomics</span>
-          <span class="tag">Data Engineering</span>
-
-        </div>
-
-
-        <div class="project-links">
-
-          <a
-            class="button"
-            href="Progress Check.pptx"
-            target="_blank">
-
-            VIEW PRESENTATION
-
-          </a>
-
-          <a
-            class="button"
-            href="Radiomic Data"
-            target="_blank">
-
-            VIEW PYTHON CODE
-
-          </a>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-
-    <!-- PROJECT 02 -->
-
-    <div class="project">
-
-      <div class="project-number">
-        02
-      </div>
-
-
-      <div class="project-image-wrap">
-
-        <img
-          class="project-image"
-          src="depositphotos_340697192-stock-photo-beautiful-ancient-books-pattern-background.jpg""
-          alt="Amazon marketplace book publishing research">
-
-      </div>
-
-
-      <div class="project-content">
-
-        <h3>
-          Book Publishing SQL Guide
-        </h3>
-
-        <p>
-
-          Our school primarily uses R when it comes to cleaning
-          and analyzing large datasets. I recently taught myself
-          how to use SQL and created this guide for my professor
-          before I transitioned to another position. I sent it to
-          her in hopes of showing both her and anyone else working
-          on the project what SQL can be used for.
-
-        </p>
-
-
-        <div class="tags">
-
-          <span class="tag">SQL</span>
-          <span class="tag">BigQuery</span>
-          <span class="tag">Data Analysis</span>
-
-        </div>
-
-
-        <div class="project-links">
-
-          <a
-            class="button"
-            href="SQL Guide (1).pdf"
-            target="_blank">
-
-            VIEW SQL GUIDE
-
-          </a>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-
-    <!-- PROJECT 03 -->
-
-    <div class="project">
-
-      <div class="project-number">
-        03
-      </div>
-
-
-      <div class="project-image-wrap">
-
-        <img
-          class="project-image"
-          src="portfolio-optimization.jpg"
-          alt="Portfolio optimization project">
-
-      </div>
-
-
-      <div class="project-content">
-
-        <h3>
-          Portfolio Optimization &amp; Efficient Frontier
-        </h3>
-
-        <p>
-
-          This was my final presentation for my Optimization course.
-          I was responsible for all of the coding and data visualizations
-          for the project.
-
-        </p>
-
-
-        <div class="tags">
-
-          <span class="tag">R</span>
-          <span class="tag">Optimization</span>
-          <span class="tag">Quantitative Analysis</span>
-          <span class="tag">Data Visualization</span>
-
-        </div>
-
-
-        <div class="project-links">
-
-          <a
-            class="button"
-            href="MTH 3017 Project Report (Draft 1) (4).pdf"
-            target="_blank">
-
-            VIEW PROJECT
-
-          </a>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-
-    <!-- PROJECT 04 -->
-
-    <div class="project">
-
-      <div class="project-number">
-        04
-      </div>
-
-
-      <div class="project-image-wrap">
-
-        <img
-          class="project-image"
-          src="epa-data.jpg"
-          alt="EPA environmental air quality project">
-
-      </div>
-
-
-      <div class="project-content">
-
-        <h3>
-          EPA Air Quality Statistical Modeling
-        </h3>
-
-        <p>
-
-          This was a project I completed with a student pursuing
-          her Master's degree in Environmental Science. I was
-          responsible for much of the statistical modeling and
-          all of the data visualizations for the project.
-
-        </p>
-
-
-        <div class="tags">
-
-          <span class="tag">R</span>
-          <span class="tag">Statistical Modeling</span>
-          <span class="tag">Data Cleaning</span>
-          <span class="tag">Excel</span>
-
-        </div>
-
-
-        <div class="project-links">
-
-          <a
-            class="button"
-            href="Project 2 Paper (13).pdf"
-            target="_blank">
-
-            VIEW PROJECT
-
-          </a>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-  </section>
-
-
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="about-content">
-
-      <div class="section-label">
-        THANK YOU!
-      </div>
-
-      <h2>
-        Thank you!
+</header>
+
+<main>
+
+<section class="hero wrap" id="home">
+  <div class="eyebrow">
+    Florida Tech · Scholar-Athlete · Class of 2027
+  </div>
+
+  <h1>Scholar. Athlete.<br>
+    <em>A little bit of everything.</em>
+  </h1>
+
+  <p class="lead">
+    I'm an applied mathematics student who loves finding
+    the connection between numbers, people, and the world
+    around us.
+  </p>
+
+  <p class="lead">
+    From cancer research to financial modeling, I believe
+    the most interesting problems rarely fit into just one
+    category.
+  </p>
+
+  <a class="btn" href="#projects">See My Projects ↗</a>
+  <a class="under" href="#about">A Little About Me ↗</a>
+</section>
+
+<section id="mosaic">
+  <div class="wrap">
+    <div class="section-intro">
+      <div class="eyebrow">01 / RESEARCH AT FLORIDA TECH</div>
+      <h2>So, what do I actually do in a
+        <em>cancer research lab?</em>
       </h2>
+      <p class="lead">
+        At Florida Tech's MOSAIC Lab, I work with cancer data
+        and try to find patterns that might actually be useful.
+        It involves a lot of coding, a lot of statistics, and
+        occasionally reminding my computer that we're on the
+        same team.
+      </p>
+    </div>
 
+    <div class="research-grid">
 
-      <div class="about-box">
-
+      <article class="research-card">
+        <div class="research-symbol" aria-hidden="true">✦</div>
+        <div class="project-type">
+          Medical Imaging / Radiomics
+        </div>
+        <h3>Lung Cancer Radiomics</h3>
         <p>
-
-          Thank you for your time and consideration. I would be
-          incredibly excited for the opportunity to contribute to
-          the Launch Supply Chain team at Cape Canaveral.
-
+          CT scans aren't just pictures. We can turn them into
+          numerical features describing things like texture,
+          shape, and patterns inside lung nodules. I study how
+          those measurements relate to radiologists' assessments,
+          including how much those assessments can differ
+          between doctors.
         </p>
-        
-         <p>
-
-          Brieleigh Wescott
-
+        <p>
+          One big question is whether the numbers we extract
+          are consistent enough to be useful. It's a surprisingly
+          interesting mix of medical imaging, statistics, and
+          figuring out why four people can look at the same
+          thing and disagree.
         </p>
+        <div class="tags">
+          Python · R · CT Imaging · Feature Analysis
+        </div>
+      </article>
 
-
-      </div>
-
+      <article class="research-card">
+        <div class="research-symbol" aria-hidden="true">🧬</div>
+        <div class="project-type">
+          Genomics / Survival Analysis
+        </div>
+        <h3>Genomic Survival Analysis</h3>
+        <p>
+          For this project, I work with gene-expression and
+          clinical data from lung cancer patients to explore
+          whether genetic information can help us understand
+          survival outcomes.
+        </p>
+        <p>
+          I use statistical survival models, including Cox
+          regression, and compare models built from clinical
+          information, genomic information, and both together.
+          With thousands of genes and far fewer patients,
+          choosing useful signals without overfitting is a
+          pretty big part of the challenge.
+        </p>
+        <div class="tags">
+          R · Cox Regression · Genomics · Model Validation
+        </div>
+      </article>
 
     </div>
 
-  </section>
+    <p class="research-note">
+      These are ongoing research projects, so I'm sharing what
+      I'm working on rather than posting research datasets
+      or unfinished results.
+    </p>
+  </div>
+</section>
 
-
-
-  <!-- SKILLS -->
-
-  <section id="skills">
-
-    <div class="section-label">
-      TECHNICAL TOOLKIT
+<section class="paper" id="projects">
+  <div class="wrap">
+    <div class="section-intro">
+      <div class="eyebrow">02 / OTHER PROJECTS</div>
+      <h2>What else have I <em>been working on?</em></h2>
+      <p class="lead">
+        A mix of deep learning, finance, data analysis,
+        business, and a novel. Apparently I don't have
+        one very specific hobby.
+      </p>
     </div>
 
-    <h2>
-      Skills &amp; Tools
-    </h2>
-
-
-    <div class="skills-grid">
-
-
-      <div class="skill-box">
-
-        <div class="skill-number">
-          01 / PROGRAMMING
-        </div>
-
-        <h3>
-          Programming
-        </h3>
-
-        <p>
-          Python<br>
-          R<br>
-          SQL<br>
-          Java
-        </p>
-
-      </div>
-
-
-      <div class="skill-box">
-
-        <div class="skill-number">
-          02 / DATA
-        </div>
-
-        <h3>
-          Data &amp; Analytics
-        </h3>
-
-        <p>
-          BigQuery<br>
-          Excel<br>
-          Data Cleaning<br>
-          Statistical Modeling<br>
-          Predictive Modeling
-        </p>
-
-      </div>
-
-
-      <div class="skill-box">
-
-        <div class="skill-number">
-          03 / QUANTITATIVE
-        </div>
-
-        <h3>
-          Quantitative
-        </h3>
-
-        <p>
-          Optimization<br>
-          Data Visualization<br>
-          Feature Extraction<br>
-          Data Pipelines<br>
-          Analytical Reporting
-        </p>
-
-      </div>
-
-
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter" data-filter="all"
+        aria-pressed="true">All</button>
+      <button class="filter" data-filter="data"
+        aria-pressed="false">Data</button>
+      <button class="filter" data-filter="finance"
+        aria-pressed="false">Finance</button>
+      <button class="filter" data-filter="other"
+        aria-pressed="false">Other</button>
     </div>
 
-  </section>
+    <div id="project-grid" class="grid"></div>
+  </div>
+</section>
 
+<section id="why-math">
+  <div class="wrap math-layout">
+    <div>
+      <div class="eyebrow">03 / THE QUESTION I GET A LOT</div>
+      <h2>Why <em>applied</em> math?</h2>
+      <div class="math-note">
+        Because I like knowing what I can actually
+        <em>do</em> with the math.
+      </div>
+    </div>
 
+    <div>
+      <p>
+        Whenever I tell someone I'm a math major, I think
+        they assume I spend all day solving equations for fun.
+        And while I've definitely done my fair share of proofs,
+        that's not really why I chose it.
+      </p>
+      <p>
+        Pure mathematics often focuses on understanding
+        mathematical ideas themselves: why things work,
+        how to prove them, and what follows from them.
+        Applied mathematics takes those tools and asks
+        what we can do with them in the real world.
+        There's overlap, of course, and both matter.
+      </p>
+      <p>
+        That's the part I love. One day I can use statistics
+        to study cancer data, the next I can work on investment
+        risk, and after that I can explore patterns in marketplace
+        data. Completely different problems, but the same
+        way of thinking.
+      </p>
+      <p>
+        I'm studying Applied Mathematics with a concentration
+        in Artificial Intelligence and Data Science, plus
+        minors in Finance and English Literature. The English
+        minor might seem like a plot twist, but I like that my
+        interests don't all fit in one box.
+      </p>
+    </div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
+<section class="paper" id="about">
+  <div class="wrap">
+    <div class="eyebrow">04 / THE PERSON BEHIND THE COMPUTER</div>
+    <h2>A little <em>about me.</em></h2>
+    <p class="lead about-intro">
+      There's more to me than datasets and homework.
+      Thankfully.
+    </p>
 
-  <footer>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>
+          I'm an NCAA Division II swimmer at Florida Tech,
+          so a pretty normal part of my week involves waking
+          up at an hour when most people are still very
+          happily asleep. Swimming has been a huge part
+          of my life, and it's taught me a lot about showing
+          up, working hard, and being part of a team.
+        </p>
 
-    Brieleigh Wescott · Applied Mathematics ·
-    Florida Institute of Technology
+        <p>
+          I'm also a big reader. I love literature, which
+          explains the English minor and probably the number
+          of books I convince myself I have time to read.
+        </p>
 
-  </footer>
+        <p>
+          I'm very social. I love meeting people, talking
+          to people, and finding out what they're interested
+          in. I know that's not always the stereotype people
+          have in mind when they hear "math major," but
+          here we are.
+        </p>
 
+        <p>
+          And, most importantly, I have two cats. They
+          contribute absolutely nothing to my statistical
+          models, but they do a great job supervising
+          from my desk.
+        </p>
+
+        <p>
+          So that's me: math, swimming, books, cats, and
+          a pretty strong tendency to find something
+          interesting in just about everything.
+        </p>
+      </div>
+
+      <div class="photos">
+        <figure class="photo-slot">
+          <div class="photo-frame">
+            <img src="swimming.jpg" alt="Brieleigh swimming"
+              onerror="this.style.display='none'">
+            <span class="photo-fallback">
+              Your swim photo goes here
+            </span>
+          </div>
+          <figcaption>
+            In my natural habitat (the pool).
+          </figcaption>
+        </figure>
+
+        <figure class="photo-slot">
+          <div class="photo-frame">
+            <img src="cats.jpg" alt="Brieleigh's two cats"
+              onerror="this.style.display='none'">
+            <span class="photo-fallback">
+              Your cat photo goes here
+            </span>
+          </div>
+          <figcaption>
+            The real bosses around here.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="contact-strip">
+      <div>
+        <h3>Want to say hi?</h3>
+        <p>
+          I'm always happy to connect, whether it's about
+          work, research, or something completely different.
+        </p>
+      </div>
+
+      <a class="btn"
+         href="https://www.linkedin.com/search/results/people/?keywords=Brieleigh%20Wescott"
+         target="_blank" rel="noopener noreferrer">
+        Find Me on LinkedIn ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Brieleigh Wescott</span>
+    <span>Built with curiosity (and probably coffee).</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+const repo =
+  "https://github.com/BrieleighWescott/" +
+  "Brieleigh-Wescott-Portfolio/blob/main/";
+
+const projectHome =
+  "https://github.com/BrieleighWescott/" +
+  "Brieleigh-Wescott-Portfolio";
+
+const projects = [
+  {
+    title: "Financial Portfolio Optimization",
+    category: "finance",
+    label: "Finance / Optimization",
+    symbol: "💵",
+    description:
+      "Exploring how math can help balance investment " +
+      "risk and return. The stock market doesn't always " +
+      "cooperate with the equations.",
+    tags: "R · Finance · Optimization",
+    file: "MTH 3017 Project Report (Draft 1) (4).pdf"
+  },
+  {
+    title: "Spotify Popularity Prediction",
+    category: "data",
+    label: "Deep Learning / Music",
+    symbol: "♫",
+    description:
+      "Can you predict how popular a song will be from " +
+      "its audio features? I trained and tuned a neural " +
+      "network on a dataset of roughly 114,000 tracks " +
+      "to find out. Turns out predicting taste in music " +
+      "is not exactly easy.",
+    tags: "Python · Neural Networks · Machine Learning",
+    url: projectHome
+  },
+  {
+    title: "EPA Air Quality Analysis",
+    category: "data",
+    label: "Environment / Data",
+    symbol: "☀",
+    description:
+      "Digging into environmental data to see what " +
+      "patterns show up and what they actually mean.",
+    tags: "Statistics · Visualization",
+    file: "Project 2 Paper (13).pdf"
+  },
+  {
+    title: "Amazon Marketplace SQL",
+    category: "other",
+    label: "Business / SQL",
+    symbol: "📖",
+    description:
+      "Using SQL to ask better questions about " +
+      "marketplace data. Because even online shopping " +
+      "has a data side.",
+    tags: "SQL · Business Analytics",
+    file: "SQL Guide (1).pdf"
+  },
+  {
+    title: "1:43 AM — A Novel",
+    category: "other",
+    label: "Creative Writing / Fiction",
+    symbol: "✒",
+    description:
+      "I wrote a psychological suspense novel called " +
+      "1:43 AM. Turns out I enjoy making up problems " +
+      "for fictional people almost as much as " +
+      "solving real ones.",
+    tags: "Creative Writing · Psychological Suspense",
+    url: projectHome
+  }
+];
+
+function makePlaceholder(symbol) {
+  const el = document.createElement("div");
+  el.className = "placeholder";
+  el.textContent = symbol;
+  return el;
+}
+
+function renderProjects(filter = "all") {
+  const grid = document.getElementById("project-grid");
+  grid.replaceChildren();
+
+  projects
+    .filter(p => filter === "all" || p.category === filter)
+    .forEach(p => {
+      const article = document.createElement("article");
+      article.className = "project";
+
+      const visual = p.image
+        ? document.createElement("img")
+        : makePlaceholder(p.symbol || "✦");
+
+      if (p.image) {
+        visual.src = p.image;
+        visual.alt = p.title;
+        visual.loading = "lazy";
+        visual.onerror = () => {
+          visual.replaceWith(makePlaceholder(p.symbol || "✦"));
+        };
+      }
+
+      article.appendChild(visual);
+
+      const body = document.createElement("div");
+      body.className = "project-body";
+
+      const label = document.createElement("div");
+      label.className = "project-type";
+      label.textContent = p.label;
+
+      const title = document.createElement("h3");
+      title.textContent = p.title;
+
+      const desc = document.createElement("p");
+      desc.textContent = p.description;
+
+      const tags = document.createElement("div");
+      tags.className = "tags";
+      tags.textContent = p.tags;
+
+      body.append(label, title, desc, tags);
+
+      const link = document.createElement("a");
+      link.className = "project-link";
+      link.href = p.file
+        ? repo + p.file.split("/").map(encodeURIComponent).join("/")
+        : p.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "View Project ↗";
+
+      body.appendChild(link);
+      article.appendChild(body);
+      grid.appendChild(article);
+    });
+}
+
+document.querySelectorAll(".filter").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(b => {
+      b.setAttribute("aria-pressed", "false");
+    });
+
+    btn.setAttribute("aria-pressed", "true");
+    renderProjects(btn.dataset.filter);
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+renderProjects();
+</script>
 
 </body>
 </html>
