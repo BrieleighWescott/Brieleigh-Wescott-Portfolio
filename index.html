@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Brieleigh Wescott — applied mathematics student, NCAA swimmer, researcher, and writer.">
-<title>Brieleigh Wescott | Scholar-Athlete & Applied Mathematics</title>
+<meta name="description" content="Brieleigh Wescott — applied mathematics student, researcher, and NCAA swimmer.">
+<title>Brieleigh Wescott | Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +22,9 @@
   --white: #fff;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -37,21 +33,14 @@ body {
   font: 15px/1.8 'DM Sans', sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
-a:focus-visible,
-button:focus-visible {
+a:focus-visible, button:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
 
-.wrap {
-  width: min(1120px, 90%);
-  margin: auto;
-}
+.wrap { width: min(1120px, 90%); margin: auto; }
 
 .eyebrow {
   font-size: 11px;
@@ -68,7 +57,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(58px, 9vw, 112px);
+  font-size: clamp(58px, 8vw, 100px);
   letter-spacing: -.045em;
   margin: 18px 0 25px;
 }
@@ -79,19 +68,11 @@ h2 {
   margin: 12px 0 24px;
 }
 
-h3 {
-  font-size: 26px;
-  margin: 12px 0;
-}
+h3 { font-size: 26px; margin: 12px 0; }
 
-em {
-  font-weight: 400;
-  color: var(--accent);
-}
+em { font-weight: 400; color: var(--accent); }
 
-p {
-  margin: 0 0 17px;
-}
+p { margin: 0 0 17px; }
 
 .lead {
   font-size: 18px;
@@ -104,7 +85,7 @@ p {
 .topbar {
   position: sticky;
   top: 0;
-  background: rgba(255, 250, 249, .97);
+  background: rgba(255,250,249,.97);
   border-bottom: 1px solid var(--line);
   z-index: 10;
   backdrop-filter: blur(12px);
@@ -118,9 +99,7 @@ nav {
   gap: 20px;
 }
 
-.brand {
-  font: 600 22px 'Playfair Display', serif;
-}
+.brand { font: 600 22px 'Playfair Display', serif; }
 
 .brand::after {
   content: "";
@@ -139,45 +118,18 @@ nav {
   font-size: 13px;
 }
 
-.links a:hover,
-.under:hover {
-  color: var(--accent);
-}
+.links a:hover, .under:hover { color: var(--accent); }
 
-/* GENERAL SECTIONS */
+/* GENERAL */
 
 section {
   padding: 105px 0;
   scroll-margin-top: 76px;
 }
 
-.paper {
-  background: var(--paper);
-}
+.paper { background: var(--paper); }
 
-.section-intro {
-  margin-bottom: 38px;
-}
-
-/* HERO */
-
-.hero {
-  padding: 130px 0 150px;
-  border-top: 5px solid var(--accent);
-}
-
-.hero .lead {
-  font-size: 20px;
-  max-width: 720px;
-}
-
-.hero h1 {
-  max-width: 1000px;
-}
-
-.hero p {
-  max-width: 720px;
-}
+.section-intro { margin-bottom: 38px; }
 
 .btn {
   display: inline-block;
@@ -189,9 +141,7 @@ section {
   transition: background .2s;
 }
 
-.btn:hover {
-  background: var(--accent);
-}
+.btn:hover { background: var(--accent); }
 
 .under {
   display: inline-block;
@@ -200,11 +150,44 @@ section {
   font-size: 13px;
 }
 
+/* HOMEPAGE WITH HEADSHOT */
+
+.hero {
+  padding: 130px 0 150px;
+  border-top: 5px solid var(--accent);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 290px;
+  gap: 58px;
+  align-items: center;
+}
+
+.hero-copy { min-width: 0; }
+
+.hero .lead { font-size: 20px; }
+
+.hero-portrait {
+  margin: 0;
+  position: relative;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 155px 155px 8px 8px;
+  box-shadow: 18px 18px 0 var(--paper);
+}
+
 /* MOSAIC LAB */
 
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2,minmax(0,1fr));
   gap: 24px;
   margin-top: 35px;
 }
@@ -250,15 +233,14 @@ section {
   cursor: pointer;
 }
 
-.filter[aria-pressed="true"],
-.filter:hover {
+.filter[aria-pressed="true"], .filter:hover {
   background: var(--ink);
   color: white;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 23px;
 }
 
@@ -266,11 +248,10 @@ section {
   background: var(--white);
   border: 1px solid var(--line);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(23, 23, 25, .035);
+  box-shadow: 0 4px 20px rgba(23,23,25,.035);
 }
 
-.project img,
-.placeholder {
+.project img, .placeholder {
   display: block;
   width: 100%;
   height: 205px;
@@ -281,13 +262,11 @@ section {
   display: grid;
   place-items: center;
   background: #eed9de;
-  color: #a6192e;
-  font: italic 50px 'Playfair Display', serif;
+  color: var(--accent);
+  font: italic 50px 'Playfair Display',serif;
 }
 
-.project-body {
-  padding: 24px;
-}
+.project-body { padding: 24px; }
 
 .project-type {
   font-size: 10px;
@@ -315,9 +294,7 @@ section {
   padding-bottom: 3px;
 }
 
-.project-link:hover {
-  color: var(--accent);
-}
+.project-link:hover { color: var(--accent); }
 
 /* WHY APPLIED MATH */
 
@@ -328,24 +305,20 @@ section {
   align-items: start;
 }
 
-.math-layout p {
-  color: var(--muted);
-}
+.math-layout p { color: var(--muted); }
 
 .math-note {
   padding: 27px;
   border-left: 2px solid var(--accent);
-  background: rgba(255, 255, 255, .72);
-  font-family: 'Playfair Display', serif;
+  background: rgba(255,255,255,.72);
+  font-family: 'Playfair Display',serif;
   font-size: 23px;
   line-height: 1.5;
 }
 
 /* ABOUT ME */
 
-.about-intro {
-  max-width: 770px;
-}
+.about-intro { max-width: 770px; }
 
 .about-grid {
   display: grid;
@@ -355,9 +328,7 @@ section {
   align-items: start;
 }
 
-.about-copy p {
-  color: var(--muted);
-}
+.about-copy p { color: var(--muted); }
 
 .photos {
   display: grid;
@@ -365,9 +336,7 @@ section {
   gap: 15px;
 }
 
-.photo-slot {
-  margin: 0;
-}
+.photo-slot { margin: 0; }
 
 .photo-frame {
   aspect-ratio: 4/5;
@@ -388,18 +357,15 @@ section {
   padding: 16px;
   text-align: center;
   color: #8f2536;
-  font: italic 21px 'Playfair Display', serif;
+  font: italic 21px 'Playfair Display',serif;
 }
 
-.photo-frame:has(img:not([style*="display: none"])) .photo-fallback {
-  display: none;
-}
+.photo-frame img + .photo-fallback { display: none; }
 
-figcaption {
+.photo-slot figcaption {
   font-size: 12px;
   color: var(--muted);
-  padding-top: 10px;
-  text-align: center;
+  margin-top: 9px;
 }
 
 /* CONTACT */
@@ -414,9 +380,7 @@ figcaption {
   gap: 25px;
 }
 
-.contact-strip h3 {
-  margin: 0 0 5px;
-}
+.contact-strip h3 { margin: 0 0 5px; }
 
 .contact-strip p {
   font-size: 13px;
@@ -440,29 +404,38 @@ footer {
 
 /* MOBILE */
 
-@media(max-width: 850px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media(max-width:850px) {
+  .hero-layout {
+    grid-template-columns: minmax(0,1fr) 220px;
+    gap: 25px;
   }
 
-  .math-layout,
-  .about-grid {
+  .grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+
+  .math-layout, .about-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  .hero {
-    padding: 95px 0;
-  }
+  .hero { padding: 95px 0; }
 }
 
-@media(max-width: 700px) {
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
+@media(max-width:700px) {
+  .research-grid { grid-template-columns: 1fr; }
 }
 
-@media(max-width: 580px) {
+@media(max-width:650px) {
+  .hero-layout { grid-template-columns: 1fr; }
+
+  .hero-portrait {
+    max-width: 260px;
+    margin: 24px auto 0;
+  }
+
+  .hero h1 { font-size: clamp(48px,10vw,72px); }
+}
+
+@media(max-width:580px) {
   nav {
     flex-direction: column;
     padding: 14px 0;
@@ -473,31 +446,18 @@ footer {
     justify-content: center;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  .grid { grid-template-columns: 1fr; }
+  .photos { gap: 10px; }
 
-  .photos {
-    gap: 10px;
-  }
+  section { padding: 75px 0; }
+  .hero { padding: 90px 0; }
 
-  section {
-    padding: 75px 0;
-  }
-
-  .hero {
-    padding: 90px 0;
-  }
-
-  .contact-strip,
-  .footer-inner {
+  .contact-strip, .footer-inner {
     flex-direction: column;
     align-items: start;
   }
 
-  .project-body p {
-    min-height: 0;
-  }
+  .project-body p { min-height: 0; }
 }
 </style>
 </head>
@@ -524,39 +484,51 @@ footer {
 <!-- HOMEPAGE -->
 
 <section class="hero wrap" id="home">
+  <div class="hero-layout">
 
-  <div class="eyebrow">
-    Florida Tech · Scholar-Athlete · Class of 2027
+    <div class="hero-copy">
+      <div class="eyebrow">
+        Florida Tech · Scholar-Athlete · Class of 2027
+      </div>
+
+      <h1>
+        Scholar. Athlete.<br>
+        <em>A little bit of everything.</em>
+      </h1>
+
+      <p class="lead">
+        I'm an applied mathematics student who loves finding
+        the connection between numbers, people, and the world
+        around us.
+      </p>
+
+      <p class="lead">
+        From cancer research to financial modeling, I believe
+        the most interesting problems rarely fit into just one
+        category.
+      </p>
+
+      <a class="btn" href="#projects">
+        See My Projects ↗
+      </a>
+
+      <a class="under" href="#about">
+        A Little About Me ↗
+      </a>
+    </div>
+
+    <!-- HEADSHOT -->
+
+    <figure class="hero-portrait">
+      <img
+        src="A457A88F-13D9-4DF9-A8A4-B62AAB9CAE02.jpg"
+        alt="Headshot of Brieleigh Wescott">
+    </figure>
+
   </div>
-
-  <h1>
-    Scholar. Athlete.<br>
-    <em>A little bit of everything.</em>
-  </h1>
-
-  <p class="lead">
-    I'm an applied mathematics student who loves finding
-    the connection between numbers, people, and the world
-    around us.
-  </p>
-
-  <p class="lead">
-    From cancer research to financial modeling, I believe
-    the most interesting problems rarely fit into just one
-    category.
-  </p>
-
-  <a class="btn" href="#projects">
-    See My Projects ↗
-  </a>
-
-  <a class="under" href="#about">
-    A Little About Me ↗
-  </a>
-
 </section>
 
-<!-- MOSAIC LAB RESEARCH -->
+<!-- MOSAIC LAB -->
 
 <section id="mosaic">
   <div class="wrap">
@@ -575,17 +547,16 @@ footer {
         At Florida Tech's MOSAIC Lab, I work with cancer data
         and try to find patterns that might actually be useful.
         It involves a lot of coding, a lot of statistics, and
-        occasionally reminding my computer that we're on the
-        same team.
+        attention to detail. I am definitely no biology expert
+        but I do know my way around a CT scan.
       </p>
     </div>
 
     <div class="research-grid">
 
-      <!-- LUNG RADIOMICS -->
+      <!-- LUNG CANCER RADIOMICS -->
 
       <article class="research-card">
-
         <div class="research-symbol">✦</div>
 
         <div class="project-type">
@@ -595,32 +566,28 @@ footer {
         <h3>Lung Cancer Radiomics</h3>
 
         <p>
-          CT scans aren't just pictures. We can turn them into
-          numerical features describing things like texture,
-          shape, and patterns inside lung nodules. I study how
-          those measurements relate to radiologists' assessments,
-          including how much those assessments can differ
-          between doctors.
+          This research uses CT scans to extract numerical
+          features that describe lung nodules, including their
+          shape, texture, and intensity patterns. I analyze
+          relationships between these radiomic features and
+          radiologists' assessments of nodule malignancy.
         </p>
 
         <p>
-          One big question is whether the numbers we extract
-          are consistent enough to be useful. It's a surprisingly
-          interesting mix of medical imaging, statistics, and
-          figuring out why four people can look at the same
-          thing and disagree.
+          I also study variation among radiologists to
+          understand how differences in their assessments
+          relate to imaging features and the reliability
+          of the measurements.
         </p>
 
         <div class="tags">
           Python · R · CT Imaging · Feature Analysis
         </div>
-
       </article>
 
-      <!-- GENOMIC SURVIVAL -->
+      <!-- GENOMIC SURVIVAL ANALYSIS -->
 
       <article class="research-card">
-
         <div class="research-symbol">🧬</div>
 
         <div class="project-type">
@@ -630,45 +597,42 @@ footer {
         <h3>Genomic Survival Analysis</h3>
 
         <p>
-          For this project, I work with gene-expression and
-          clinical data from lung cancer patients to explore
-          whether genetic information can help us understand
-          survival outcomes.
+          This project examines gene-expression and clinical
+          data from lung cancer patients to investigate
+          relationships between genomic information and
+          patient survival outcomes.
         </p>
 
         <p>
-          I use statistical survival models, including Cox
-          regression, and compare models built from clinical
-          information, genomic information, and both together.
-          With thousands of genes and far fewer patients,
-          choosing useful signals without overfitting is a
-          pretty big part of the challenge.
+          I use Cox regression and regularization methods
+          to develop and evaluate survival models. The
+          analysis compares clinical, genomic, and combined
+          models while examining feature selection,
+          overfitting, and predictive performance.
         </p>
 
         <div class="tags">
           R · Cox Regression · Genomics · Model Validation
         </div>
-
       </article>
 
     </div>
 
     <p class="research-note">
-      These are ongoing research projects, so I'm sharing what
-      I'm working on rather than posting research datasets
-      or unfinished results.
+      These are ongoing research projects, so I'm sharing
+      what I'm working on rather than posting research
+      datasets or unfinished results.
     </p>
 
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- OTHER PROJECTS -->
 
 <section class="paper" id="projects">
   <div class="wrap">
 
     <div class="section-intro">
-
       <div class="eyebrow">
         02 / OTHER PROJECTS
       </div>
@@ -680,14 +644,11 @@ footer {
 
       <p class="lead">
         A mix of deep learning, finance, data analysis,
-        business, and a novel. Apparently I don't have
-        one very specific hobby.
+        business, and a novel.
       </p>
-
     </div>
 
     <div class="filters" role="group" aria-label="Filter projects">
-
       <button class="filter" data-filter="all" aria-pressed="true">
         All
       </button>
@@ -703,7 +664,6 @@ footer {
       <button class="filter" data-filter="other" aria-pressed="false">
         Other
       </button>
-
     </div>
 
     <div id="project-grid" class="grid"></div>
@@ -717,7 +677,6 @@ footer {
   <div class="wrap math-layout">
 
     <div>
-
       <div class="eyebrow">
         03 / THE QUESTION I GET A LOT
       </div>
@@ -730,11 +689,9 @@ footer {
         Because I like knowing what I can actually
         <em>do</em> with the math.
       </div>
-
     </div>
 
     <div>
-
       <p>
         Whenever I tell someone I'm a math major, I think
         they assume I spend all day solving equations for fun.
@@ -766,7 +723,6 @@ footer {
         minor might seem like a plot twist, but I like that my
         interests don't all fit in one box.
       </p>
-
     </div>
 
   </div>
@@ -832,21 +788,18 @@ footer {
 
       </div>
 
-      <!-- PHOTOS -->
+      <!-- PERSONAL PHOTOS -->
 
       <div class="photos">
 
-        <!-- SWIMMING PHOTO -->
-
         <figure class="photo-slot">
-
           <div class="photo-frame">
 
             <img
               src="B112B575-62CA-499B-B1F8-E968AFB8D868.jpg"
               alt="Brieleigh swimming for Florida Tech"
               loading="lazy"
-              onerror="this.style.display='none'">
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
 
             <span class="photo-fallback">
               Swimming photo
@@ -857,20 +810,16 @@ footer {
           <figcaption>
             In my natural habitat (the pool).
           </figcaption>
-
         </figure>
 
-        <!-- CAT PHOTO -->
-
         <figure class="photo-slot">
-
           <div class="photo-frame">
 
             <img
               src="View recent photos.png"
               alt="Brieleigh's two cats"
               loading="lazy"
-              onerror="this.style.display='none'">
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
 
             <span class="photo-fallback">
               My two cats
@@ -881,7 +830,6 @@ footer {
           <figcaption>
             The real bosses around here.
           </figcaption>
-
         </figure>
 
       </div>
@@ -920,7 +868,6 @@ footer {
 
 <footer>
   <div class="wrap footer-inner">
-
     <span>
       © <span id="year"></span> Brieleigh Wescott
     </span>
@@ -929,14 +876,11 @@ footer {
       Built with curiosity (and probably coffee).
     </span>
 
-    <a href="#home">
-      Back to top ↑
-    </a>
-
+    <a href="#home">Back to top ↑</a>
   </div>
 </footer>
 
-<!-- JAVASCRIPT -->
+<!-- PROJECT DATA AND JAVASCRIPT -->
 
 <script>
 
@@ -946,8 +890,6 @@ const repo =
 
 const projects = [
 
-  // FINANCIAL PORTFOLIO
-
   {
     title: "Financial Portfolio Optimization",
     category: "finance",
@@ -956,16 +898,14 @@ const projects = [
     image: "portfolio-optimization.jpg",
 
     description:
-      "Exploring how math can help balance investment " +
-      "risk and return. The stock market doesn't always " +
-      "cooperate with the equations.",
+      "Developed an investment portfolio optimization " +
+      "analysis to examine asset allocation, portfolio " +
+      "risk, and expected returns using quantitative methods.",
 
     tags: "R · Finance · Optimization",
 
     file: "MTH 3017 Project Report (Draft 1) (4).pdf"
   },
-
-  // SPOTIFY DEEP LEARNING
 
   {
     title: "Spotify Popularity Prediction",
@@ -974,19 +914,16 @@ const projects = [
     symbol: "♫",
 
     description:
-      "Can you predict how popular a song will be from " +
-      "its audio features? I trained and tuned a neural " +
-      "network on a dataset of roughly 114,000 tracks " +
-      "to find out. Turns out predicting taste in music " +
-      "is not exactly easy.",
+      "Developed and tuned a neural network to predict " +
+      "Spotify song popularity using audio features from " +
+      "approximately 114,000 tracks. Evaluated model " +
+      "performance and hyperparameter choices.",
 
     tags: "Python · Neural Networks · Machine Learning",
 
     file:
       "Predicting Spotify Song Popularity Using Neural Networks (5).pdf"
   },
-
-  // EPA AIR QUALITY
 
   {
     title: "EPA Air Quality Analysis",
@@ -996,15 +933,14 @@ const projects = [
     image: "epa-data.jpg",
 
     description:
-      "Digging into environmental data to see what " +
-      "patterns show up and what they actually mean.",
+      "Analyzed environmental air quality data to identify " +
+      "patterns, explore relationships among variables, " +
+      "and communicate findings through statistical analysis.",
 
     tags: "Statistics · Visualization",
 
     file: "Project 2 Paper (13).pdf"
   },
-
-  // AMAZON SQL
 
   {
     title: "Amazon Marketplace SQL",
@@ -1014,16 +950,14 @@ const projects = [
     image: "amazon-marketplace.jpg",
 
     description:
-      "Using SQL to ask better questions about " +
-      "marketplace data. Because even online shopping " +
-      "has a data side.",
+      "Used SQL queries to organize and analyze marketplace " +
+      "data, investigate business questions, and demonstrate " +
+      "database analysis techniques.",
 
     tags: "SQL · Business Analytics",
 
     file: "SQL Guide (1).pdf"
   },
-
-  // NOVEL
 
   {
     title: "1:43 AM — A Novel",
@@ -1035,10 +969,9 @@ const projects = [
       "depositphotos_340697192-stock-photo-beautiful-ancient-books-pattern-background.jpg",
 
     description:
-      "I wrote a psychological suspense novel called " +
-      "1:43 AM. Turns out I enjoy making up problems " +
-      "for fictional people almost as much as " +
-      "solving real ones.",
+      "Wrote a psychological suspense novel titled 1:43 AM, " +
+      "focusing on narrative structure, character development, " +
+      "and suspenseful storytelling.",
 
     tags: "Creative Writing · Psychological Suspense",
 
@@ -1047,25 +980,20 @@ const projects = [
 
 ];
 
-/* FALLBACK FOR MISSING PROJECT IMAGES */
+/* CREATE IMAGE PLACEHOLDERS */
 
 function makePlaceholder(symbol) {
-
   const el = document.createElement("div");
-
   el.className = "placeholder";
   el.textContent = symbol;
-
   return el;
-
 }
 
-/* CREATE PROJECT CARDS */
+/* RENDER PROJECT CARDS */
 
 function renderProjects(filter = "all") {
 
   const grid = document.getElementById("project-grid");
-
   grid.replaceChildren();
 
   projects
@@ -1080,7 +1008,6 @@ function renderProjects(filter = "all") {
         : makePlaceholder(p.symbol || "✦");
 
       if (p.image) {
-
         visual.src = p.image;
         visual.alt = p.title;
         visual.loading = "lazy";
@@ -1090,7 +1017,6 @@ function renderProjects(filter = "all") {
             makePlaceholder(p.symbol || "✦")
           );
         };
-
       }
 
       article.appendChild(visual);
@@ -1130,10 +1056,9 @@ function renderProjects(filter = "all") {
       grid.appendChild(article);
 
     });
-
 }
 
-/* FILTER BUTTONS */
+/* PROJECT FILTER BUTTONS */
 
 document.querySelectorAll(".filter").forEach(btn => {
 
@@ -1151,12 +1076,12 @@ document.querySelectorAll(".filter").forEach(btn => {
 
 });
 
-/* CURRENT YEAR */
+/* FOOTER YEAR */
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
-/* LOAD ALL PROJECTS */
+/* INITIALIZE PROJECTS */
 
 renderProjects();
 
@@ -1164,3 +1089,4 @@ renderProjects();
 
 </body>
 </html>
+
